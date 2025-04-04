@@ -9,6 +9,9 @@ dist/
 web-build/
 expo-env.d.ts
 
+# Webstorm
+.idea
+
 # Native
 *.orig.*
 *.jks

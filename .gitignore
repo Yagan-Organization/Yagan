@@ -10,7 +10,7 @@ web-build/
 expo-env.d.ts
 
 # Webstorm
-.idea
+.idea/
 
 # Native
 *.orig.*

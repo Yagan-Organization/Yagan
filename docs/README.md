@@ -2,7 +2,7 @@
 
 ## What is Yagan?
 
-Yagan is a mobile app (currently in development) designed to help users of the Swiss public rail system make their travel easier and less expensive. With a simple and intuitive interface, Yagan allows users to report incidents on trains, such as out-of-service toilets, crowd density, or the presence of conductors.
+Yagan is a mobile app (currently in development) designed to help users of the Swiss public rail system make their travel easier and less expensive. With a simple and intuitive interface, Yagan allows users to report incidents on trains, such as out-of-service toilets, crowd density, or the presence of ticket inspector..
 
 ## Key Features
 - **Trip Search:** Users can search for train trips by entering their departure and arrival points.

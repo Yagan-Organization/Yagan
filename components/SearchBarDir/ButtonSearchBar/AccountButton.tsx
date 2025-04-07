@@ -15,8 +15,8 @@ export default function TravelButton() {
             }}>
             <Image
                 style={{
-                    width: 34.11,
-                    height: 24.05,
+                    width: 40,
+                    height: 28.2,
                     resizeMode: 'contain',
                 }}
                 source={require('@/assets/images/account.png')}

@@ -1,11 +1,11 @@
 import { View } from "react-native";
 import colors from '@/constants/colors'
-import TravelButton from "@/components/SearchBarDir/ButtonSearchBar/TravelButton";
-import MyTripButton from "@/components/SearchBarDir/ButtonSearchBar/MyTripButton";
-import DevNoteButton from "@/components/SearchBarDir/ButtonSearchBar/DevNoteButton";
-import AccountButton from "@/components/SearchBarDir/ButtonSearchBar/AccountButton";
+import TravelButton from "@/components/MenuComponents/MenuButtons/TravelButton";
+import MyTripButton from "@/components/MenuComponents/MenuButtons/MyTripButton";
+import DevNoteButton from "@/components/MenuComponents/MenuButtons/DevNoteButton";
+import AccountButton from "@/components/MenuComponents/MenuButtons/AccountButton";
 
-export default function SearchBar() {
+export default function Menu() {
     return (
         <View
             style={{

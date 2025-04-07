@@ -5,7 +5,7 @@ export default function Index() {
   return (
     <View
       style={{
-        marginBottom: '40',
+        marginBottom: 40,
         flex: 1,
         flexDirection: 'column-reverse',
         justifyContent: "space-between",
@@ -15,5 +15,7 @@ export default function Index() {
     >
        <SearchBar />
     </View>
+
   );
+
 }

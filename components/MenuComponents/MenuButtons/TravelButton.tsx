@@ -7,9 +7,9 @@ export default function TravelButton() {
         <View
             style={{
                 justifyContent: 'center',
-                alignItems: 'center', // Correction de 'Center' en 'center'
-                width: 50, // Utilisation d'un nombre au lieu d'une chaîne
-                height: 50, // Même correction ici
+                alignItems: 'center',
+                width: 50,
+                height: 50,
                 backgroundColor: colors.background,
                 borderRadius: 50,
             }}>

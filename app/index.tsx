@@ -1,5 +1,6 @@
 import { View } from "react-native";
 import Menu from '@/components/MenuComponents/Menu';
+import SearchBar from "@/components/SearchBar/SearchBar";
 
 export default function Index() {
   return (
@@ -14,6 +15,7 @@ export default function Index() {
       }}
     >
        <Menu />
+        <SearchBar />
     </View>
 
   );

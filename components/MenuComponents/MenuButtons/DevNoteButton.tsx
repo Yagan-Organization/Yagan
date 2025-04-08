@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import colors from '@/constants/colors';
-import DevNote from '@/assets/images/icoMenu/devNote.svg';
+import Devnote from '@/assets/images/icoMenu/devnote';
 
 export default function DevNoteButton() {
     return (
@@ -14,7 +14,7 @@ export default function DevNoteButton() {
                 backgroundColor: colors.background,
                 borderRadius: 50,
             }}>
-            <DevNote width={26} height={30} />
+            <Devnote></Devnote>
         </View>
     );
 }

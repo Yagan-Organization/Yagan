@@ -1,6 +1,6 @@
-import { View, Image } from 'react-native';
+import { View } from 'react-native';
 import colors from '@/constants/colors';
-
+import Account from '@/assets/images/icoMenu/account'
 
 export default function TravelButton() {
     return (
@@ -14,14 +14,7 @@ export default function TravelButton() {
                 backgroundColor: colors.background,
                 borderRadius: 50,
             }}>
-            <Image
-                style={{
-                    width: 40,
-                    height: 28.2,
-                    resizeMode: 'contain',
-                }}
-                source={require('@/assets/images/icoMenu/account.svg')}
-            />
+            <Account></Account>
         </View>
     );
 }

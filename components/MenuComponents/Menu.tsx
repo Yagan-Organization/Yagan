@@ -32,7 +32,6 @@ export default function Menu() {
             <MyTripButton ></MyTripButton>
             <DevNoteButton></DevNoteButton>
             <AccountButton ></AccountButton>
-            <SelectButton ></SelectButton>
         </View>
     );
 }

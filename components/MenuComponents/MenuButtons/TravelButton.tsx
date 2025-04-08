@@ -1,26 +1,20 @@
-import { View, Image } from 'react-native';
-import colors from '@/constants/colors';
+import { View } from 'react-native';
+import Travel from '@/assets/images/icoMenu/travel';
 
 
 export default function TravelButton() {
     return (
         <View
             style={{
+                zIndex: 2,
                 justifyContent: 'center',
-                alignItems: 'center', // Correction de 'Center' en 'center'
-                width: 50, // Utilisation d'un nombre au lieu d'une chaîne
-                height: 50, // Même correction ici
-                backgroundColor: colors.background,
+                alignItems: 'center',
+                width: 50,
+                height: 50,
+                backgroundColor: 'none',
                 borderRadius: 50,
             }}>
-            <Image
-                style={{
-                    width: 40,
-                    height: 28.2,
-                    resizeMode: 'contain',
-                }}
-                source={require('@/assets/images/travel.png')}
-            />
+            <Travel></Travel>
         </View>
     );
 }

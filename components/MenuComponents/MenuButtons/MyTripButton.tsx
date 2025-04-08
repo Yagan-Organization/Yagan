@@ -6,6 +6,7 @@ export default function TravelButton() {
     return (
         <View
             style={{
+                zIndex: 2,
                 justifyContent: 'center',
                 alignItems: 'center', // Correction de 'Center' en 'center'
                 width: 50, // Utilisation d'un nombre au lieu d'une chaîne
@@ -19,7 +20,7 @@ export default function TravelButton() {
                     height: 28.2,
                     resizeMode: 'contain',
                 }}
-                source={require('@/assets/images/my_trip.png')}
+                source={require('@/assets/images/icoMenu/travel.svg')}
             />
         </View>
     );

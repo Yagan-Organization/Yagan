@@ -6,11 +6,12 @@ export default function TravelButton() {
     return (
         <View
             style={{
+                zIndex: 2,
                 justifyContent: 'center',
                 alignItems: 'center', // Correction de 'Center' en 'center'
                 width: 50, // Utilisation d'un nombre au lieu d'une chaîne
                 height: 50, // Même correction ici
-                backgroundColor: colors.background,
+                backgroundColor: 'none',
                 borderRadius: 50,
             }}>
             <Image
@@ -19,7 +20,7 @@ export default function TravelButton() {
                     height: 28.2,
                     resizeMode: 'contain',
                 }}
-                source={require('@/assets/images/devnote.png')}
+                source={require('@/assets/images/icoMenu/devnote.svg')}
             />
         </View>
     );

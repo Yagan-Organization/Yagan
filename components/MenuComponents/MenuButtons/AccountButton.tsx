@@ -6,6 +6,7 @@ export default function TravelButton() {
     return (
         <View
             style={{
+                zIndex: 2,
                 justifyContent: 'center',
                 alignItems: 'center',
                 width: 50,
@@ -19,7 +20,7 @@ export default function TravelButton() {
                     height: 28.2,
                     resizeMode: 'contain',
                 }}
-                source={require('@/assets/images/account.png')}
+                source={require('@/assets/images/icoMenu/account.svg')}
             />
         </View>
     );

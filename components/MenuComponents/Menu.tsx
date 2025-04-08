@@ -4,11 +4,14 @@ import TravelButton from "@/components/MenuComponents/MenuButtons/TravelButton";
 import MyTripButton from "@/components/MenuComponents/MenuButtons/MyTripButton";
 import DevNoteButton from "@/components/MenuComponents/MenuButtons/DevNoteButton";
 import AccountButton from "@/components/MenuComponents/MenuButtons/AccountButton";
+import SelectButton from "@/components/MenuComponents/MenuButtons/SelectButton";
 
 export default function Menu() {
     return (
         <View
             style={{
+                paddingLeft: 20,
+                paddingRight: 20,
                 backgroundColor: colors.background,
                 width: 400,
                 height: 80,
@@ -22,14 +25,13 @@ export default function Menu() {
                 shadowOpacity: 0.3,
                 shadowRadius: 4,
                 elevation: 5,
-                paddingLeft: 20,
-                paddingRight: 20,
             }}
         >
-            <TravelButton></TravelButton>
-            <MyTripButton></MyTripButton>
+
+            <TravelButton ></TravelButton>
+            <MyTripButton ></MyTripButton>
             <DevNoteButton></DevNoteButton>
-            <AccountButton></AccountButton>
+            <AccountButton ></AccountButton>
         </View>
     );
 }

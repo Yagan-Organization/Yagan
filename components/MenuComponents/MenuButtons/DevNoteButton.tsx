@@ -1,27 +1,20 @@
-import { View, Image } from 'react-native';
+import { View } from 'react-native';
 import colors from '@/constants/colors';
+import DevNote from '@/assets/images/icoMenu/devNote.svg';
 
-
-export default function TravelButton() {
+export default function DevNoteButton() {
     return (
         <View
             style={{
                 zIndex: 2,
                 justifyContent: 'center',
-                alignItems: 'center', // Correction de 'Center' en 'center'
-                width: 50, // Utilisation d'un nombre au lieu d'une chaîne
-                height: 50, // Même correction ici
-                backgroundColor: 'none',
+                alignItems: 'center',
+                width: 50,
+                height: 50,
+                backgroundColor: colors.background,
                 borderRadius: 50,
             }}>
-            <Image
-                style={{
-                    width: 40,
-                    height: 28.2,
-                    resizeMode: 'contain',
-                }}
-                source={require('@/assets/images/icoMenu/devnote.svg')}
-            />
+            <DevNote width={26} height={30} />
         </View>
     );
 }

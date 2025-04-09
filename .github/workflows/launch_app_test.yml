@@ -2,9 +2,9 @@ name: React Native Expo CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main, master, develop ]
   pull_request:
-    branches: [ master ]
+    branches: [ main, master, develop ]
 
 jobs:
   test:
@@ -17,17 +17,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Run linting
-        run: yarn lint
+        run: npm run lint
         # Si vous n'avez pas de commande lint définie, vous pouvez la commenter ou supprimer
 
       - name: Run tests
-        run: yarn test
+        run: npm test
         # Assurez-vous d'avoir configuré Jest ou un autre framework de test
 
       - name: Expo doctor
@@ -51,10 +51,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Build iOS app
         run: npx expo prebuild --platform ios
@@ -73,12 +73,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Build Android app
         run: npx expo prebuild --platform android
 
-      # Vous pouvez ajouter des tests e2e ici si vous en avez

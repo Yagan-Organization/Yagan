@@ -1,0 +1,34 @@
+name: test application launch
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+
+      - name: Installation des dépendances
+        run: npm install
+
+      - name: Vérification de la compilation TypeScript
+        run: npx tsc --noEmit
+
+      - name: Exécution des tests
+        run: npm test
+
+      - name: Vérification du build Expo
+        run: |
+          npx expo install --fix
+          npx expo prebuild --clean

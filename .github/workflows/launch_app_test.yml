@@ -36,13 +36,14 @@ jobs:
       - name: Build app preview (Expo)
         run: |
           npx expo install --check
+          mkdir -p assets/images
+          # Télécharger une icône temporaire si nécessaire
+          curl -o assets/images/icon.png https://github.com/expo/expo/raw/master/templates/expo-template-blank/assets/icon.png
           npx expo prebuild --clean
           npx expo export:web
 
   e2e-ios:
     runs-on: macos-latest
-    # Décommentez si vous voulez exécuter ce job uniquement pour les PR
-    # if: github.event_name == 'pull_request'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -55,16 +56,18 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Create required assets
+        run: |
+          mkdir -p assets/images
+          # Télécharger une icône temporaire
+          curl -o assets/images/icon.png https://github.com/expo/expo/raw/master/templates/expo-template-blank/assets/icon.png
 
       - name: Build iOS app
         run: npx expo prebuild --platform ios
 
-      # Vous pouvez ajouter des tests e2e ici si vous en avez
-
   e2e-android:
     runs-on: ubuntu-latest
-    # Décommentez si vous voulez exécuter ce job uniquement pour les PR
-    # if: github.event_name == 'pull_request'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -78,6 +81,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Create required assets
+        run: |
+          mkdir -p assets/images
+          # Télécharger une icône temporaire
+          curl -o assets/images/icon.png https://github.com/expo/expo/raw/master/templates/expo-template-blank/assets/icon.png
+
       - name: Build Android app
         run: npx expo prebuild --platform android
-

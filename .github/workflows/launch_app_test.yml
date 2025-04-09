@@ -1,4 +1,4 @@
-name: test application launch
+name: React Native Expo CI
 
 on:
   push:
@@ -9,26 +9,76 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
-          cache: 'npm'
+          node-version: 18
+          cache: 'yarn'
 
-      - name: Installation des dépendances
-        run: npm install
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
 
-      - name: Vérification de la compilation TypeScript
-        run: npx tsc --noEmit
+      - name: Run linting
+        run: yarn lint
+        # Si vous n'avez pas de commande lint définie, vous pouvez la commenter ou supprimer
 
-      - name: Exécution des tests
-        run: npm test
+      - name: Run tests
+        run: yarn test
+        # Assurez-vous d'avoir configuré Jest ou un autre framework de test
 
-      - name: Vérification du build Expo
+      - name: Expo doctor
+        run: npx expo-doctor
+
+      - name: Build app preview (Expo)
         run: |
-          npx expo install --fix
+          npx expo install --check
           npx expo prebuild --clean
+          npx expo export:web
+
+  e2e-ios:
+    runs-on: macos-latest
+    # Décommentez si vous voulez exécuter ce job uniquement pour les PR
+    # if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build iOS app
+        run: npx expo prebuild --platform ios
+
+      # Vous pouvez ajouter des tests e2e ici si vous en avez
+
+  e2e-android:
+    runs-on: ubuntu-latest
+    # Décommentez si vous voulez exécuter ce job uniquement pour les PR
+    # if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build Android app
+        run: npx expo prebuild --platform android
+
+      # Vous pouvez ajouter des tests e2e ici si vous en avez

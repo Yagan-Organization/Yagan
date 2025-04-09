@@ -1,6 +1,6 @@
 ![Yagan Banner.png](imgDOCS/Yagan%20Banner.png)
 
-https://ci.appveyor.com/api/projects/status/github/homogenic1000/Yagan?branch=main&svg=true
+![https://ci.appveyor.com/api/projects/status/github/homogenic1000/Yagan?branch=main&svg=true]
 
 ## What is Yagan?
 

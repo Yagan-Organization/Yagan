@@ -31,7 +31,7 @@ export default function Menu() {
             <TravelButton ></TravelButton>
             <MyTripButton ></MyTripButton>
             <DevNoteButton></DevNoteButton>
-            <AccountButton ></AccountButton>
+            <AccountButton></AccountButton>
             <SelectButton></SelectButton>
         </View>
     );

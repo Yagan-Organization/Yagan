@@ -1,10 +1,19 @@
-import { View } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
 import colors from '@/constants/colors';
-import Account from '@/assets/images/icoMenu/account'
+import Account from '@/assets/images/icoMenu/account';
 
-export default function TravelButton() {
+type RootStackParamList = {
+    Home: undefined;
+    ScreenAccount: undefined;
+};
+
+export default function AccountButton() {
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
     return (
-        <View
+        <TouchableOpacity
+            onPress={() => navigation.navigate('ScreenAccount')}
             style={{
                 zIndex: 2,
                 justifyContent: 'center',
@@ -14,8 +23,7 @@ export default function TravelButton() {
                 backgroundColor: colors.background,
                 borderRadius: 50,
             }}>
-            <Account></Account>
-        </View>
+            <Account />
+        </TouchableOpacity>
     );
 }
-

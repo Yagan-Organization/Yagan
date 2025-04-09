@@ -1,5 +1,7 @@
 ![Yagan Banner.png](imgDOCS/Yagan%20Banner.png)
 
+https://ci.appveyor.com/api/projects/status/github/homogenic1000/Yagan?branch=main&svg=true
+
 ## What is Yagan?
 
 Yagan is a mobile app (currently in development) designed to help users of the Swiss public rail system make their travel easier and less expensive. With a simple and intuitive interface, Yagan allows users to report incidents on trains, such as out-of-service toilets, crowd density, or the presence of ticket inspector..

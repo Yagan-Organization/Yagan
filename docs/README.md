@@ -1,6 +1,7 @@
 ![Yagan Banner.png](imgDOCS/Yagan%20Banner.png)
 
-[![GitHub Actions](https://github.com/homogenic1000/Yagan/actions/workflows/test.yml/badge.svg)](https://github.com/homogenic1000/Yagan/actions)
+![GitHub Actions](https://img.shields.io/github/actions/workflow/status/homogenic1000/Yagan/launch_app_test.yml?branch=master&style=flat-square)
+
 ## What is Yagan?
 
 Yagan is a mobile app (currently in development) designed to help users of the Swiss public rail system make their travel easier and less expensive. With a simple and intuitive interface, Yagan allows users to report incidents on trains, such as out-of-service toilets, crowd density, or the presence of ticket inspector..

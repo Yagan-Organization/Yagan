@@ -2,9 +2,9 @@ name: App Build Test
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, UI ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, UI ]
 
 jobs:
   test:

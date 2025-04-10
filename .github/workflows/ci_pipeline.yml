@@ -1,0 +1,56 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ master, UI ]
+  pull_request:
+    branches: [ master, UI ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linting
+        run: npm run lint
+
+      - name: Run unit tests
+        run: npx jest --ci --coverage
+
+  e2e-tests:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Setup Detox environment
+        run: |
+          brew tap wix/brew
+          brew install applesimutils
+          npm install -g detox-cli
+
+      - name: Build app for E2E tests
+        run: npx detox build --configuration ios.sim.debug
+
+      - name: Run E2E tests
+        run: npx detox test --configuration ios.sim.debug

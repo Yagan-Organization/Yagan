@@ -1,5 +1,3 @@
-// src/styles/colors.ts
-
 const colors = {
     red: '#EB0000',
     SoftAnthracite: '#262B2D',

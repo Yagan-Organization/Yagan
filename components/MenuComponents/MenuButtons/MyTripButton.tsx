@@ -1,22 +1,39 @@
-import { View } from 'react-native';
-import colors from '@/constants/colors';
-import Mytrip from '@/assets/images/icoMenu/mytrip';
+import { TouchableOpacity } from 'react-native';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
+import MyTrip from '@/assets/images/icoMenu/mytrip';
 
+type RootStackParamList = {
+    Home: undefined;
+    ScreenMyTrip: undefined;
+};
 
-export default function TravelButton() {
+interface MyTripButtonProps {
+    isSelected: boolean;
+    onPress: () => void;
+}
+
+export default function MyTripButton({ isSelected, onPress }: MyTripButtonProps) {
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+    const handlePress = () => {
+        onPress();
+        navigation.navigate('ScreenMyTrip');
+    };
+
     return (
-        <View
+        <TouchableOpacity
+            onPress={handlePress}
             style={{
                 zIndex: 2,
                 justifyContent: 'center',
-                alignItems: 'center', // Correction de 'Center' en 'center'
-                width: 50, // Utilisation d'un nombre au lieu d'une chaîne
-                height: 50, // Même correction ici
-                backgroundColor: colors.background,
+                alignItems: 'center',
+                width: 50,
+                height: 50,
+                backgroundColor: 'transparent',
                 borderRadius: 50,
-            }}>
-            <Mytrip></Mytrip>
-        </View>
+            }}
+        >
+            <MyTrip fill={isSelected ? '#FFFFFF' : '#000000'} />
+        </TouchableOpacity>
     );
 }
-

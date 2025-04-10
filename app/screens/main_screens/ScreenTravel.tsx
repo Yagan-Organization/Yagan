@@ -3,7 +3,7 @@ import Menu from '@/components/MenuComponents/Menu';
 import SearchBar from "@/components/SearchBar/SearchBar";
 import * as React from "react";
 
-export default function Home() {
+export default function ScreenTravel() {
   return (
     <View
       style={{
@@ -19,3 +19,4 @@ export default function Home() {
     </View>
   );
 }
+

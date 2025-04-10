@@ -3,7 +3,7 @@ import { useNavigation, NavigationProp } from '@react-navigation/native';
 import Devnote from '@/assets/images/icoMenu/devnote';
 
 type RootStackParamList = {
-    ScreenHome: undefined;
+    ScreenTravel: undefined;
     ScreenAccount: undefined;
     ScreenDevNotes: undefined;
     ScreenMyTrip: undefined;
@@ -39,3 +39,4 @@ export default function DevNoteButton({ isSelected, onPress }: DevNoteButtonProp
         </TouchableOpacity>
     );
 }
+

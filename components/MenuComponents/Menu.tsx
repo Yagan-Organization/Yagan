@@ -11,7 +11,7 @@ import { useMenuContext } from "@/context/MenuContext";
 
 export default function Menu() {
     const { selectedButton, setSelectedButton } = useMenuContext();
-    const positions = [0, 70, 140, 210, 280]; // Positions approximatives pour chaque bouton
+    const positions = [18, 123, 226, 328]; // Positions approximatives pour chaque bouton
 
     return (
         <View

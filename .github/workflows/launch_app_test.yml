@@ -36,10 +36,8 @@ jobs:
       - name: Build app preview (Expo)
         run: |
           npx expo install --check
-          mkdir -p assets/images
-          # Télécharger une icône temporaire si nécessaire
-          curl -o assets/images/icon.png https://github.com/expo/expo/raw/master/templates/expo-template-blank/assets/icon.png
-          npx expo prebuild --clean
+          # Désactiver la génération des ressources
+          npx expo prebuild --clean --no-install
           npx expo export:web
 
   e2e-ios:
@@ -57,14 +55,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Create required assets
-        run: |
-          mkdir -p assets/images
-          # Télécharger une icône temporaire
-          curl -o assets/images/icon.png https://github.com/expo/expo/raw/master/templates/expo-template-blank/assets/icon.png
-
+      # Utiliser --no-install pour éviter la génération des ressources
       - name: Build iOS app
-        run: npx expo prebuild --platform ios
+        run: npx expo prebuild --platform ios --no-install
 
   e2e-android:
     runs-on: ubuntu-latest
@@ -81,11 +74,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Create required assets
-        run: |
-          mkdir -p assets/images
-          # Télécharger une icône temporaire
-          curl -o assets/images/icon.png https://github.com/expo/expo/raw/master/templates/expo-template-blank/assets/icon.png
-
+      # Utiliser --no-install pour éviter la génération des ressources
       - name: Build Android app
-        run: npx expo prebuild --platform android
+        run: npx expo prebuild --platform android --no-install

@@ -1,27 +1,39 @@
-import { View, Image } from 'react-native';
-import colors from '@/constants/colors';
+import { TouchableOpacity } from 'react-native';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
+import Travel from '@/assets/images/icoMenu/travel';
 
+type RootStackParamList = {
+    ScreenTravel: undefined;
+    ScreenAccount: undefined;
+};
 
-export default function TravelButton() {
-    return (
-        <View
-            style={{
-                justifyContent: 'center',
-                alignItems: 'center', // Correction de 'Center' en 'center'
-                width: 50, // Utilisation d'un nombre au lieu d'une chaîne
-                height: 50, // Même correction ici
-                backgroundColor: colors.background,
-                borderRadius: 50,
-            }}>
-            <Image
-                style={{
-                    width: 40,
-                    height: 28.2,
-                    resizeMode: 'contain',
-                }}
-                source={require('@/assets/images/travel.png')}
-            />
-        </View>
-    );
+interface TravelButtonProps {
+    isSelected: boolean;
+    onPress: () => void;
 }
 
+export default function TravelButton({ isSelected, onPress }: TravelButtonProps) {
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+    const handlePress = () => {
+        onPress();
+        navigation.navigate('ScreenTravel');
+    };
+
+    return (
+        <TouchableOpacity
+            onPress={handlePress}
+            style={{
+                zIndex: 2,
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: 50,
+                height: 50,
+                backgroundColor: 'transparent',
+                borderRadius: 50,
+            }}
+        >
+            <Travel fill={isSelected ? '#FFFFFF' : '#000000'} />
+        </TouchableOpacity>
+    );
+}

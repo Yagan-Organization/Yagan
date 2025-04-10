@@ -1,27 +1,42 @@
-import { View, Image } from 'react-native';
-import colors from '@/constants/colors';
+import { TouchableOpacity } from 'react-native';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
+import Devnote from '@/assets/images/icoMenu/devnote';
 
+type RootStackParamList = {
+    ScreenTravel: undefined;
+    ScreenAccount: undefined;
+    ScreenDevNotes: undefined;
+    ScreenMyTrip: undefined;
+};
 
-export default function TravelButton() {
+interface DevNoteButtonProps {
+    isSelected: boolean;
+    onPress: () => void;
+}
+
+export default function DevNoteButton({ isSelected, onPress }: DevNoteButtonProps) {
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+    const handlePress = () => {
+        onPress();
+        navigation.navigate('ScreenDevNotes');
+    };
+
     return (
-        <View
+        <TouchableOpacity
+            onPress={handlePress}
             style={{
+                zIndex: 2,
                 justifyContent: 'center',
-                alignItems: 'center', // Correction de 'Center' en 'center'
-                width: 50, // Utilisation d'un nombre au lieu d'une chaîne
-                height: 50, // Même correction ici
-                backgroundColor: colors.background,
+                alignItems: 'center',
+                width: 50,
+                height: 50,
+                backgroundColor: 'transparent',
                 borderRadius: 50,
-            }}>
-            <Image
-                style={{
-                    width: 40,
-                    height: 28.2,
-                    resizeMode: 'contain',
-                }}
-                source={require('@/assets/images/devnote.png')}
-            />
-        </View>
+            }}
+        >
+            <Devnote fill={isSelected ? '#FFFFFF' : '#000000'} />
+        </TouchableOpacity>
     );
 }
 

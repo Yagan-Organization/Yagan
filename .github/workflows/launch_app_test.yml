@@ -1,4 +1,4 @@
-name: React Native Expo CI
+name: App Build Test
 
 on:
   push:

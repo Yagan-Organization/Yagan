@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { View, Animated } from "react-native";
+import React from 'react';
+import { View } from 'react-native';
+import {useMenuContext} from '@/context/UseContextMenu';
 import colors from '@/constants/colors';
 import TravelButton from "@/components/MenuComponents/MenuButtons/TravelButton";
 import MyTripButton from "@/components/MenuComponents/MenuButtons/MyTripButton";
@@ -8,8 +9,8 @@ import AccountButton from "@/components/MenuComponents/MenuButtons/AccountButton
 import SelectButton from "@/components/MenuComponents/MenuButtons/SelectButton";
 
 export default function Menu() {
-    const [selectedButton, setSelectedButton] = useState(0);
-    const positions = [0, 70, 140, 210, 280]; // Positions approximatives pour chaque bouton
+    const { selectedButton, setSelectedButton } = useMenuContext();
+    const positions = [18, 123, 225, 329]; // Positions pour : Travel, MyTrip, DevNote, Account
 
     return (
         <View

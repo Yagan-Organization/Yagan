@@ -27,9 +27,7 @@ jobs:
         # Si vous n'avez pas de commande lint définie, vous pouvez la commenter ou supprimer
 
       - name: Run tests
-        # Modifié pour éviter le mode --watchAll en CI
-        run: npm test -- --ci --passWithNoTests
-        # Ou vous pouvez utiliser directement : npx jest --ci --passWithNoTests
+        run: npx jest --ci --passWithNoTests
 
       - name: Expo doctor
         run: npx expo-doctor

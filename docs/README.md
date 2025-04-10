@@ -1,5 +1,7 @@
 ![Yagan Banner.png](imgDOCS/Yagan%20Banner.png)
-delet
+
+[![React Native Expo CI](https://github.com/homogenic1000/Yagan/actions/workflows/expo-ci.yml/badge.svg)](https://github.com/homogenic1000/Yagan/actions/workflows/expo-ci.yml)
+
 ## What is Yagan?
 
 Yagan is a mobile app (currently in development) designed to help users of the Swiss public rail system make their travel easier and less expensive. With a simple and intuitive interface, Yagan allows users to report incidents on trains, such as out-of-service toilets, crowd density, or the presence of ticket inspector..

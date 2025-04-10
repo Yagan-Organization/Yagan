@@ -1,23 +1,19 @@
-import { View } from "react-native";
-import Menu from '@/components/MenuComponents/Menu';
-import SearchBar from "@/components/SearchBar/SearchBar";
+import * as React from "react";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ScreenHome from "./screens/main_screens/ScreenTravel";
+import ScreenAccount from "@/app/screens/main_screens/ScreenAccount";
+import ScreenMyTrips from "@/app/screens/main_screens/ScreenMyTrips";
+import ScreenDevNotes from "@/app/screens/main_screens/ScreenDevNotes";
 
-export default function Index() {
+const Stack = createNativeStackNavigator();
+
+export default function App() {
   return (
-    <View
-      style={{
-        marginBottom: 40,
-        flex: 1,
-        flexDirection: 'column-reverse',
-        justifyContent: "space-between",
-        alignItems: "center",
-
-      }}
-    >
-       <Menu />
-        <SearchBar />
-    </View>
-
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="ScreenTravel" component={ScreenHome} />
+      <Stack.Screen name="ScreenAccount" component={ScreenAccount} />
+      <Stack.Screen name="ScreenMyTrip" component={ScreenMyTrips} />
+      <Stack.Screen name="ScreenDevNotes" component={ScreenDevNotes} />
+    </Stack.Navigator>
   );
-
 }

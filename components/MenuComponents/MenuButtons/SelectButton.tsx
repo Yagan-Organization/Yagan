@@ -1,16 +1,34 @@
-import { View } from 'react-native';
+import React from 'react';
+import { Animated } from 'react-native';
 import colors from '@/constants/colors';
 
-export default function SelectButton() {
-    return (
-        <View style={{
+interface SelectButtonProps {
+    position: number;
+}
 
-            position: 'absolute',
-            zIndex: 0,
-            backgroundColor: colors.red,
-            borderRadius: 80,
-            width: 60,
-            height: 60,
-        }}></View>
-    )
+export default function SelectButton({ position }: SelectButtonProps) {
+    const translateX = new Animated.Value(position);
+
+    React.useEffect(() => {
+        Animated.spring(translateX, {
+            toValue: position,
+            useNativeDriver: true,
+            tension: 100,
+            friction: 10
+        }).start();
+    }, [position]);
+
+    return (
+        <Animated.View
+            style={{
+                position: 'absolute',
+                left: 20,
+                width: 50,
+                height: 50,
+                backgroundColor: colors.background,
+                borderRadius: 25,
+                transform: [{ translateX }],
+            }}
+        />
+    );
 }

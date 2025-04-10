@@ -1,6 +1,6 @@
 ![Yagan Banner.png](imgDOCS/Yagan%20Banner.png)
 
-[![React Native Expo CI](https://github.com/homogenic1000/Yagan/actions/workflows/expo-ci.yml/badge.svg)](https://github.com/homogenic1000/Yagan/actions/workflows/expo-ci.yml)
+[![React Native Expo CI](https://github.com/homogenic1000/Yagan/actions/workflows/launch_app_test.yml/badge.svg)](https://github.com/homogenic1000/Yagan/actions/workflows/launch_app_test.yml)
 
 ## What is Yagan?
 

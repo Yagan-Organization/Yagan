@@ -7,12 +7,14 @@ export default function ScreenDevNotes() {
     return (
         <View
             style={{
+                marginBottom: 40,
                 flex: 1,
-                justifyContent: "center",
+                flexDirection: 'column-reverse',
+                justifyContent: "space-between",
                 alignItems: "center",
             }}
         >
-            <Text>Account Screen</Text>
+
             <Menu></Menu>
         </View>
     );

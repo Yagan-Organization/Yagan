@@ -1,12 +1,17 @@
 import React from 'react';
 import { View } from 'react-native';
 import colors from '../../constants/colors';
+import ButtonAccountScreen from './ButtonAccountScreen';
 
 export default function AccountBar(props: any) {
     return (
         <View
             style={{
-                backgroundColor: colors.SoftAnthracite,
+                flexDirection: 'column',
+                backgroundColor: colors.background,
+                borderColor: colors.SoftAnthracite,
+                borderWidth: 1,
+                borderRadius: 20,
                 width: 400,
                 height: 400,
                 shadowColor: "#000",
@@ -16,6 +21,7 @@ export default function AccountBar(props: any) {
                 elevation: 5,
             }}
         >
+            <ButtonAccountScreen></ButtonAccountScreen>
 
         </View>
     )

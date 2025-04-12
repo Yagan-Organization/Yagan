@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import colors from '../../constants/colors';
 
-export default function AccountScreen(props: any) {
+export default function AccountBar(props: any) {
     return (
         <View
             style={{

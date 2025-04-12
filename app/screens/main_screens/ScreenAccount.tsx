@@ -1,7 +1,7 @@
 import * as React from "react";
 import { View, Text } from "react-native";
 import Menu from '@/components/MenuComponents/Menu';
-import AccountScreen from "@/components/AccountScreen/AccountScreen";
+import AccountBar from "@/components/AccountScreen/AccountBar";
 
 
 
@@ -16,7 +16,7 @@ export default function ScreenAccount() {
                 alignItems: "center",
             }}
         >
-            <AccountScreen></AccountScreen>
+            <AccountBar></AccountBar>
             <Menu></Menu>
         </View>
     );

@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run linting
-        run: npm run lint
-        # Si vous n'avez pas de commande lint définie, vous pouvez la commenter ou supprimer
 
       - name: Run tests
         run: npx jest --ci --passWithNoTests

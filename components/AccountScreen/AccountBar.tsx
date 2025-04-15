@@ -19,6 +19,8 @@ export default function AccountBar(props: any) {
                 shadowOpacity: 0.3,
                 shadowRadius: 4,
                 elevation: 5,
+                padding: 10,
+
             }}
         >
             <ButtonAccountScreen></ButtonAccountScreen>

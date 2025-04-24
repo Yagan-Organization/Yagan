@@ -12,6 +12,8 @@ Yagan is not only an artistic project; it also serves as a political statement. 
 
 In a time when sustainable public transport is more crucial than ever, the government’s lack of support sends a troubling message about its priorities. Public transportation is a key element in building a greener and more socially just future. By failing to invest adequately in CFF, the government risks undermining accessibility, environmental efforts, and social cohesion.
 
+ 
+
 ## Key Features
 - **Trip Search:** Users can search for train trips by entering their departure and arrival points.
 - **Reporting:** Users can report specific incidents on the trains (e.g., out-of-service toilets, ticket checks, etc.).

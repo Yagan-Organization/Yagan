@@ -9,13 +9,13 @@ export default function ScreenAccount() {
     return (
         <View
             style={{
-                marginBottom: 40,
                 flex: 1,
+                marginBottom: 40,
                 flexDirection: 'column',
                 justifyContent: "space-between",
-                alignItems: "left",
-                paddingLeft: 20,
-                paddingRight: 20,
+                alignItems: 'flex-start',
+                paddingLeft: '5%',
+                paddingRight:'5%',
                 paddingTop: 0,
 
             }}

@@ -1,8 +1,8 @@
 import * as React from "react";
 import { View, Text } from "react-native";
 import Menu from '@/components/MenuComponents/Menu';
-import AccountBar from "@/components/AccountScreen/AccountBar";
-import AccountStatus from "@/components/AccountScreen/AccountStatus";
+import AccountBar from "@/components/AccountComponents/AccountBar";
+import AccountStatus from "@/components/AccountComponents/AccountStatus";
 
 
 export default function ScreenAccount() {

@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import colors from '../../constants/colors';
 import ButtonAccountScreen from './ButtonAccountScreen';
 
-export default function AccountBar(props: any) {
+export default function AccountBar() {
     return (
         <View
             style={{

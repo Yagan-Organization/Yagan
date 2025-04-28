@@ -1,100 +1,72 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { HeaderButton, Text } from '@react-navigation/elements';
-import {
-    createStaticNavigation,
-    StaticParamList,
-} from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Image } from 'react-native';
-import Account from '@/assets/images/icoMenu/account';
-import devnote from '@/assets/images/icoMenu/devnote';
-import mytrip from '@/assets/images/icoMenu/mytrip';
-import travel from '@/assets/images/icoMenu/travel';
-import ScreenMyTrips from "@/app/screens/main_screens/ScreenMyTrips";
 import ScreenTravel from "@/app/screens/main_screens/ScreenTravel";
-import Svg from "react-native-svg";
+import Svg, {Path, } from "react-native-svg";
+import Props from "react-native-gesture-handler";
+import ScreenMyTrips from "@/app/screens/main_screens/ScreenMyTrips";
+import ScreenDevNotes from "@/app/screens/main_screens/ScreenDevNotes";
+import ScreenAccount from "@/app/screens/main_screens/ScreenAccount";
 
 const HomeTabs = createBottomTabNavigator({
     screens: {
-        Home: {
+        Travel: {
             screen: ScreenTravel,
             options: {
-                title: 'Feed',
-                tabBarIcon: ({ color, size }) => (
-                    <Svg
-                    source = {travel}
-                    />
+                title: 'Travel ',
+                tabBarIcon: () => (
+                    <Svg width={26} height={28} viewBox="0 0 26 28" fill="none" {...Props}>
+                        <Path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M8.29933 7.56474C8.29933 4.31371 10.5398 1.84321 13.1175 1.84321C15.6952 1.84321 17.9356 4.31371 17.9356 7.56474C17.9356 10.8158 15.6952 13.2863 13.1175 13.2863C10.5398 13.2863 8.29933 10.8146 8.29933 7.56474ZM13.1175 0.638672C9.70743 0.638672 7.0948 3.83069 7.0948 7.56474C7.0948 9.32336 7.67298 10.9615 8.64263 12.2022C3.51854 14.551 0.770996 20.8182 0.770996 26.5362V27.1384H25.4639V26.5362C25.4639 20.7869 22.7128 14.5378 17.5923 12.2022C18.5608 10.9615 19.1401 9.32336 19.1401 7.56474C19.1401 3.83069 16.5275 0.638672 13.1175 0.638672ZM16.7058 13.1321C15.7132 13.9813 14.4798 14.4908 13.1175 14.4908C11.7551 14.4908 10.5205 13.9813 9.52796 13.1309C4.92062 15.0003 2.17669 20.5171 1.98637 25.9339H24.2474C24.0583 20.487 21.3095 14.9871 16.7058 13.1321Z"
+                            fill="black"
+                        />
+                    </Svg>
                 ),
             },
         },
-        Updates: {
-            screen: ,
+        MyTrips: {
+            screen: ScreenMyTrips,
             options: {
-                tabBarIcon: ({ color, size }) => (
-                    <Image
-                        source={bell}
-                        tintColor={color}
-                        style={{
-                            width: size,
-                            height: size,
-                        }}
-                    />
+                tabBarIcon: ({ }) => (
+                    <Svg width="22" height="21" viewBox="0 0 22 21" fill="none">
+                        <Path fill-rule="evenodd" clip-rule="evenodd" d="M21.2943 4.19623L17.1212 0.0249023L16.4954 0.650779L19.9124 4.0661H0.411133V4.95135H19.9133L16.4954 8.3773L17.1221 9.00317L21.2943 4.82122L21.6068 4.50873L21.2943 4.19623ZM0.774088 16.1472L4.94719 11.9759L5.57306 12.6017L2.15597 16.0171H21.6573V16.9023H2.15509L5.57306 20.3283L4.9463 20.9541L0.774088 16.7722L0.461593 16.4597L0.774088 16.1472Z" fill="black"/>
+                    </Svg>
                 ),
             },
         },
+
+        DevNotes: {
+            screen: ScreenDevNotes,
+            options: {
+                tabBarIcon: ({}) =>(
+                    <Svg width="26" height="30" viewBox="0 0 26 30" fill="none">
+                        <Path fillRule="evenodd"
+                              clipRule="evenodd"
+                              d="M12.696 0.0249023C11.3997 0.0249023 10.6342 0.478241 10.2106 1.02819C10.0513 1.23416 9.95046 1.44225 9.88782 1.61743H6.59129V3.20995H0.221191V29.752H25.1708V3.20995H18.8007V1.61743H15.5041C15.4285 1.40513 15.3195 1.20623 15.1814 1.02819C14.7567 0.478241 13.9923 0.0249023 12.696 0.0249023ZM18.8007 4.27164V5.86416H6.59129V4.27164H1.28288V28.6904H24.1091V4.27164H18.8007ZM10.8402 2.15676L10.837 2.178L10.8157 2.67911H7.65298V4.80248H17.739V2.67911H14.5752L14.5539 2.17693L14.5518 2.1557C14.5209 1.98059 14.448 1.81557 14.3395 1.67476C14.1505 1.43057 13.7216 1.08659 12.696 1.08659C11.6704 1.08659 11.2415 1.42951 11.0504 1.67582C10.9427 1.81691 10.8705 1.98188 10.8402 2.15676ZM4.73335 9.58005V10.6417H20.6586V9.58005H4.73335ZM20.6586 14.3576V15.4193H4.73335V14.3576H20.6586ZM4.73335 19.1352V20.1969H20.6586V19.1352H4.73335ZM12.696 24.9745H4.73335V23.9128H12.696V24.9745Z"
+                              fill="black"/>
+                    </Svg>
+                )
+            }
+
+        },
+
+        Account: {
+            screen: ScreenAccount,
+            options: {
+                tabBarIcon: ({}) => (
+                    <Svg width={26} height={28} viewBox="0 0 26 28" fill="none" {...Props}>
+                        <Path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M8.29933 7.56474C8.29933 4.31371 10.5398 1.84321 13.1175 1.84321C15.6952 1.84321 17.9356 4.31371 17.9356 7.56474C17.9356 10.8158 15.6952 13.2863 13.1175 13.2863C10.5398 13.2863 8.29933 10.8146 8.29933 7.56474ZM13.1175 0.638672C9.70743 0.638672 7.0948 3.83069 7.0948 7.56474C7.0948 9.32336 7.67298 10.9615 8.64263 12.2022C3.51854 14.551 0.770996 20.8182 0.770996 26.5362V27.1384H25.4639V26.5362C25.4639 20.7869 22.7128 14.5378 17.5923 12.2022C18.5608 10.9615 19.1401 9.32336 19.1401 7.56474C19.1401 3.83069 16.5275 0.638672 13.1175 0.638672ZM16.7058 13.1321C15.7132 13.9813 14.4798 14.4908 13.1175 14.4908C11.7551 14.4908 10.5205 13.9813 9.52796 13.1309C4.92062 15.0003 2.17669 20.5171 1.98637 25.9339H24.2474C24.0583 20.487 21.3095 14.9871 16.7058 13.1321Z"
+                            fill="black"
+                        />
+                    </Svg>
+                )
+            }
+        }
     },
 });
 
-const RootStack = createNativeStackNavigator({
-    screens: {
-        HomeTabs: {
-            screen: HomeTabs,
-            options: {
-                title: 'Home',
-                headerShown: false,
-            },
-        },
-        Profile: {
-            screen: Profile,
-            linking: {
-                path: ':user(@[a-zA-Z0-9-_]+)',
-                parse: {
-                    user: (value) => value.replace(/^@/, ''),
-                },
-                stringify: {
-                    user: (value) => `@${value}`,
-                },
-            },
-        },
-        Settings: {
-            screen: Settings,
-            options: ({ navigation }) => ({
-                presentation: 'modal',
-                headerRight: () => (
-                    <HeaderButton onPress={navigation.goBack}>
-                        <Text>Close</Text>
-                    </HeaderButton>
-                ),
-            }),
-        },
-        NotFound: {
-            screen: NotFound,
-            options: {
-                title: '404',
-            },
-            linking: {
-                path: '*',
-            },
-        },
-    },
-});
+export default HomeTabs
 
-export const Navigation = createStaticNavigation(RootStack);
-
-type RootStackParamList = StaticParamList<typeof RootStack>;
-
-declare global {
-    namespace ReactNavigation {
-        interface RootParamList extends RootStackParamList {}
-    }
-}

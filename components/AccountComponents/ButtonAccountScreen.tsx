@@ -18,7 +18,8 @@ export default function ButtonAccountScreen({ BtnText, icon }: ButtonAccountScre
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'row', // Ajout pour aligner l'icône et le texte
-            paddingHorizontal: 15,
+            paddingHorizontal: 10,
+
         }}>
             {icon && <View style={{ margin: 0,
             width: '10%'

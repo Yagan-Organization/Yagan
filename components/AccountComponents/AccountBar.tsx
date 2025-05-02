@@ -8,23 +8,22 @@ export default function AccountBar() {
     return (
         <View
             style={{
-                alignContent: 'space-between',
+                display: 'flex',
                 flexDirection: 'column',
                 backgroundColor: colors.background,
                 borderColor: colors.SoftAnthracite,
                 borderWidth: 1,
                 borderRadius: 20,
-                width: '100%',
-
-                height: 400,
+                width: '400',
+                height: '260',
                 shadowColor: "#000",
                 shadowOffset: { width: 0, height: 2 },
                 shadowOpacity: 0.3,
                 shadowRadius: 4,
                 elevation: 5,
-                padding: 10,
+                paddingHorizontal: 10,
+                paddingVertical: 15,
                 gap: '10%',
-
 
             }}
         >

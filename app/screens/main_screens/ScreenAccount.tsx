@@ -8,18 +8,19 @@ import AccountStatus from "@/components/AccountComponents/AccountStatus";
 export default function ScreenAccount() {
     return (
         <View
-            style={{
-                flex: 1,
-                marginBottom: 40,
-                flexDirection: 'column',
-                justifyContent: "space-between",
-                alignItems: 'flex-start',
-                paddingLeft: '5%',
-                paddingRight:'5%',
-                paddingTop: 0,
+        style={{
+            flex: 1,
+            paddingVertical: 30,
+            flexDirection: 'column',
+            justifyContent: 'space-evenly',
+            paddingHorizontal: '10',
+            alignContent: 'center'
 
-            }}
+        }}
         >
+
+
+        <View>
             <Text
                 style={{
                     textAlign: "left",
@@ -32,8 +33,17 @@ export default function ScreenAccount() {
             >
                 My Account
             </Text>
-            <AccountStatus></AccountStatus>
-            <AccountBar></AccountBar>
+            <View
+            style={{
+                width: 400,
+                gap: 10,
+            }}
+            >
+                <AccountStatus></AccountStatus>
+                <AccountBar></AccountBar>
+            </View>
+        </View>
+
             <Menu></Menu>
         </View>
     );

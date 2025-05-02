@@ -18,13 +18,16 @@ export default function AccountStatus() {
             <AccountPicture></AccountPicture>
             <View
             style={{
-                flexDirection: 'column'
+                alignItems: 'center',
+                flexDirection: 'column',
+                paddingHorizontal: 10,
+                gap: 5
             }}
             >
             <Text
                 style={{
+                    margin: 0,
                     fontWeight: '600',
-                    margin: 10,
                     flexDirection: 'column',
                     fontSize: 24,
                     color: "#000000",
@@ -33,7 +36,12 @@ export default function AccountStatus() {
 
             > Mathéo Delessert
             </Text>
-            <Text>
+            <Text
+            style={{
+                margin: 0,
+                textAlign: "left",
+            }}
+            >
                 hello@matheodelessert.ch
             </Text>
             </View>

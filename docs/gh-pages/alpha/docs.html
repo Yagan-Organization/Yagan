@@ -9,7 +9,69 @@
     <link rel="icon" href="../../assets/favicon.png" type="image/x-icon">
 </head>
 <body>
+<script>
+window.onload = function() {
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.innerHTML = `
+        <div class="popup-content">
+            <h3>⚠️Documentation in devloppement </h3>
+            <p> This documentation is still in development. Some sections may be incomplete or <br> So if you have any question contact me
+            hello@matheodelessert.ch
+</p>
+            <button id="closePopup">Compris</button><link rel="stylesheet" href="../../gh-pages/style.css">
+                <link rel="stylesheet" href="../../gh-pages/style-docs.css">
+                <style>
+                    .popup {
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: rgba(0, 0, 0, 0.8);
+                        padding: 20px;
+                        border-radius: 8px;
+                        color: white;
+                        z-index: 1000;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                    .popup-content {
+                        text-align: center;
+                    }
+                    .popup h3 {
+                        margin: 0 0 10px 0;
+                        color: white;
+                    }
+                    .popup p {
+                        margin: 0 0 15px 0;
+                    }
+                    .popup button {
+                        background: var(--yagan-red);
+                        color: white;
+                        border: none;
+                        padding: 8px 16px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+                    .popup button:hover {
+                        background: #c41e24;
+                    }
+                </style>
+        </div>
+    `;
+    document.body.appendChild(popup);
 
+    const closeBtn = document.getElementById('closePopup');
+    closeBtn.onclick = function() {
+        popup.style.display = 'none';
+    };
+
+    // Afficher la popup après un court délai
+    setTimeout(() => {
+        popup.style.opacity = '1';
+    }, 500);
+}
+
+</script>
 <header>
     <div id="logo-container">
         <img id="logo" src="../../assets/images/logo.png" alt="Logo of Yagan organization">
@@ -19,10 +81,10 @@
         </h2>
     </div>
     <nav id="button-container">
-        <button><a href="/index.html">about</a></button>
-        <button><a href="/contributing.html">contributing</a></button>
-        <button><a href="/team.html">team</a></button>
-        <button><a href="/docs/alpha/docs.html">docs</a></button>
+        <button><a href="/docs/index.html">about</a></button>
+        <button><a href="/docs/gh-pages/contributing.html">contributing</a></button>
+        <button><a href="/docs/gh-pages/team.html">team</a></button>
+        <button><a href="/docs/gh-pages/alpha/docs.html">docs</a></button>
     </nav>
 </header>
 
@@ -72,7 +134,7 @@
     </aside>
 
     <main class="docs-content">
-        <h1>Yagan Documentation</h1>
+        <h1>Getting Started</h1>
 
         <section id="introduction-docs">
             <h2><strong>Introduction</strong></h2>
@@ -81,11 +143,11 @@
             <p>This documentation will guide you through the installation, usage, and contribution to the Yagan project.</p>
 
             <h3><strong>Why Yagan ?</strong></h3>
-            <p>Yagan is not only an artistic project; it also serves as a political statement. Through Yagan, we express our disagreement with the Swiss government's decision to reduce or deny subsidies to the Swiss Federal Railways (CFF).</p>
+            <p>Yagan is not only an  project; it also serves as a political statement. Through Yagan, we express our disagreement with the Swiss government's decision to reduce or deny subsidies to the Swiss Federal Railways (CFF).</p>
 
             <p>In a time when sustainable public transport is more crucial than ever, the government's lack of support sends a troubling message about its priorities. Public transportation is a key element in building a greener and more socially just future.</p>
         </section>
-
+        <hr>
         <section id="installation">
             <h2>Installation</h2>
 
@@ -95,7 +157,6 @@
                 <li>Node.js (version 14 or higher)</li>
                 <li>npm (version 6 or higher)</li>
                 <li>React Native CLI</li>
-                <li>PostgreSQL for the database</li>
             </ul>
 
             <h3>Installing the Project</h3>
@@ -132,8 +193,9 @@ npx react-native run-ios</code></pre>
                 <li><strong>Save a trip:</strong> Save your regular trips to receive notifications about incidents</li>
             </ul>
         </section>
-
+        <hr>
         <section id="trip-search">
+            <h1> Core features</h1>
             <h2>Trip Search</h2>
             <p>The Trip Search feature allows users to find train connections between stations in Switzerland.</p>
 
@@ -217,6 +279,7 @@ const report = await createReport({
 
         <!-- Additional sections would continue here -->
         <section id="api-overview">
+            <h1>API Reference</H1>
             <h2>API Overview</h2>
             <p>Yagan uses a combination of internal APIs and external services to provide its functionality. This section provides an overview of the available APIs.</p>
 
@@ -332,7 +395,7 @@ const stationInfo = await getStationInfo('Lausanne');</code></pre>
         <button><a href="../../index.html">about</a></button>
         <button><a href="../contributing.html">contributing</a></button>
         <button><a href="../team.html">team</a></button>
-        <button><a href="/docs/alpha/docs.html">docs</a></button>
+        <button><a href="/docs/gh-pages/alpha/docs.html">docs</a></button>
     </nav>
 </footer>
 

@@ -68,24 +68,26 @@
 }
 
 .docs-content h1 {
+    font-size: 3em;
     text-align: left;
-    margin-top: 0;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 0.5em;
+    margin-top: 2px;
+    border-bottom: 0;
+
 }
 
 .docs-content h2 {
     margin-top: 1.5em;
-    font-size: 1.8em;
+    font-size: 2.2em;
 }
 
 .docs-content h3 {
     margin-top: 1.2em;
-    font-size: 1.4em;
+    font-size: 1.8em;
 }
 
 .docs-content p {
     line-height: 1.6;
+
 }
 
 .docs-content pre {
@@ -175,6 +177,10 @@ title{
     font-size: 2em;
 }
 
-h2{
-    font-size: 2.5em;
+hr{
+    border: 0;
+    height: 1px;
+    background-color: #898989;
+    border-radius: 1px;
+    margin: 1.5em 0;
 }

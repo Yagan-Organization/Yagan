@@ -4,6 +4,11 @@ import Menu from '@/components/MenuComponents/Menu';
 import colors from '@/constants/colors';
 import Train from "@/components/TrainComponents/train";
 
+/**
+ * Renders a styled button labeled "Organize a trip" with a red background and rounded corners.
+ *
+ * This component is purely presentational and does not handle any user interaction or state.
+ */
 function ButtonTrip() {
     return (
         <View
@@ -29,6 +34,11 @@ function ButtonTrip() {
     );
 }
 
+/**
+ * Renders the main screen layout for displaying and organizing trips.
+ *
+ * Displays a header with the title "My Trips", a scrollable area containing trip information, a button to organize a new trip, and a bottom menu.
+ */
 export default function ScreenMyTrips() {
     return (
         <View

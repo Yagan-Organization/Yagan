@@ -2,9 +2,9 @@ name: App Build Test
 
 on:
   push:
-    branches: [ master, UI ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, UI ]
+    branches: [ master ]
 
 permissions:
   contents: read

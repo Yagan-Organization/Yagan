@@ -1,5 +1,6 @@
 import { View, Text } from 'react-native';
 import SearchBar from './components/travel/SearchBar';
+import Menu from './components/Menu/Menu'
 
 export default function Travel() {
     return (
@@ -9,6 +10,7 @@ export default function Travel() {
         }}
         >
             <SearchBar></SearchBar>
+            <Menu></Menu>
         </View>
     );
 }

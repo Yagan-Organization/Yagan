@@ -19,18 +19,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Run Tests
-        run: yarn test
+        run: npm test
 
       - name: ESLint and TypeScript Check
         run: |
-          yarn lint
-          yarn typescript
+          npm run lint
+          npm run typescript
 
   build-android:
     name: Build Android App
@@ -44,10 +44,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Setup Java
         uses: actions/setup-java@v3
@@ -97,10 +97,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -136,13 +136,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'yarn'
+          cache: 'npm'
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: npm ci
 
       - name: Setup Expo CLI
-        run: yarn global add expo-cli eas-cli
+        run: npm install -g expo-cli eas-cli
 
       - name: Login to Expo
         env:

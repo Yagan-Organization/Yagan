@@ -1,5 +1,12 @@
 import {Svg, Path } from 'react-native-svg';
 
+/**
+ * Renders the "Dev Notes" SVG icon as a React Native component.
+ *
+ * The icon is displayed at a fixed size of 36x36 units with a black fill and a complex path forming the "Dev Notes" design.
+ *
+ * @returns The SVG element representing the "Dev Notes" icon.
+ */
 export default function DevNotesIcon(){
     return(
             <Svg

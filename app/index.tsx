@@ -2,6 +2,9 @@ import { View  } from 'react-native';
 import SearchBar from './components/travel/SearchBar';
 import Menu from './components/Menu/Menu'
 
+/**
+ * Displays the main travel screen with a search bar and a menu, arranged vertically.
+ */
 export default function Travel() {
     return (
         <View

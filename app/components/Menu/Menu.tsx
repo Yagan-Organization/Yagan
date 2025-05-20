@@ -20,13 +20,13 @@ export default function Menu() {
 
     // Update selected index based on current route
     useEffect(() => {
-        if (pathname === '/' || pathname === '/index') {
+        if (pathname === '/' || pathname === '/(tabs)/' || pathname === '/(tabs)/index') {
             setSelectedIndex(0);
-        } else if (pathname === '/my-trips') {
+        } else if (pathname === '/(tabs)/my-trips') {
             setSelectedIndex(1);
-        } else if (pathname === '/dev-notes') {
+        } else if (pathname === '/(tabs)/dev-notes') {
             setSelectedIndex(2);
-        } else if (pathname === '/account') {
+        } else if (pathname === '/(tabs)/account') {
             setSelectedIndex(3);
         }
     }, [pathname]);
@@ -34,22 +34,22 @@ export default function Menu() {
     // Navigation functions
     const navigateToTravel = () => {
         setSelectedIndex(0);
-        router.replace('/');
+        router.replace('/(tabs)/');
     };
 
     const navigateToMyTrips = () => {
         setSelectedIndex(1);
-        router.replace('/my-trips');
+        router.replace('/(tabs)/my-trips');
     };
 
     const navigateToDevNotes = () => {
         setSelectedIndex(2);
-        router.replace('/dev-notes');
+        router.replace('/(tabs)/dev-notes');
     };
 
     const navigateToAccount = () => {
         setSelectedIndex(3);
-        router.replace('/account');
+        router.replace('/(tabs)/account');
     };
 
     return (

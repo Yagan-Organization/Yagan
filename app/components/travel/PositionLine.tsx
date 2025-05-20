@@ -3,11 +3,11 @@ import { Line, Circle, Svg } from 'react-native-svg';
 
 export default function PositionLine() {
     return(
-        <Svg width="17" height="81" viewBox="0 0 17 81" fill="none" >
-            <Line x1="8.6875" y1="15.7095" x2="8.6875" y2="64.6771" stroke="black"/>
+        <Svg width="17" height="100" viewBox="0 0 17 81" fill="none" >
+            <Line x1="8.6875" y1="15.7095" x2="8.6875" y2="61.6771" stroke="black"/>
             <Circle cx="8.63867" cy="8.42969" r="7.5" stroke="#008CFF"/>
             <Circle cx="8.63889" cy="8.4299" r="4.1926" stroke="#008CFF" stroke-width="0.75"/>
-            <Circle cx="8.63867" cy="72.1055" r="7.5" stroke="black"/>
+            <Circle cx="8.63867" cy="70.1055" r="7.5" stroke="black"/>
         </Svg>
 
     )

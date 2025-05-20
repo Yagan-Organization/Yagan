@@ -10,13 +10,13 @@ import SelectedButton from './Icon/SelectedButton';
 export default function Menu() {
     const router = useRouter();
     const pathname = usePathname();
-    
+
     // State to track which button is selected (0: Travel, 1: MyTrips, 2: DevNotes, 3: Account)
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     // Constants for button sizing and layout
     const BUTTON_WIDTH = 50;
-    const BUTTON_GAP = 40; // Approximate gap between buttons when using space-between
+    let BUTTON_GAP = 54; // Approximate gap between buttons when using space-between
 
     // Update selected index based on current route
     useEffect(() => {
@@ -58,7 +58,7 @@ export default function Menu() {
                 marginHorizontal: 16,
                 marginVertical: 8,
                 flexDirection: 'row',
-                justifyContent: 'space-between',
+                justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: '#F5F5F5',
                 borderRadius: 64,
@@ -73,6 +73,7 @@ export default function Menu() {
                 shadowRadius: 3.84,
                 elevation: 5,
                 position: 'relative', // Important for absolute positioning of children
+                gap: 72
             }}
         >
             <SelectedButton position={selectedIndex} buttonWidth={BUTTON_WIDTH} gap={BUTTON_GAP} />

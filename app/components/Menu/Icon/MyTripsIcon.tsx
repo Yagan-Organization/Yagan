@@ -1,11 +1,11 @@
-import {Svg, Path, G, Defs, Styles } from 'react-native-svg';
+import {Svg, Path } from 'react-native-svg';
 
 
 export default function MyTripsIcon(){
     return(
         <Svg
-            width={100}
-            height={100}
+            width={36}
+            height={36}
             viewBox="0 0 430.6 303.62"
             fill="currentColor"
         >

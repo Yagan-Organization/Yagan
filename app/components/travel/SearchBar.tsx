@@ -1,4 +1,4 @@
-import {View, TextInput, Text} from 'react-native';
+import {View, TextInput } from 'react-native';
 import { colors } from '../../constants/colors';
 import PositionLine from './PositionLine';
 
@@ -14,7 +14,8 @@ export default function SearchBar() {
                 borderRadius: 20,
                 flexDirection: 'row',
                 backgroundColor: colors.white,
-                padding: 16,
+                paddingHorizontal: 16,
+                paddingVertical: 12,
                 margin: 0,
                 shadowColor: '#000',
                 shadowOffset: {
@@ -41,7 +42,8 @@ export default function SearchBar() {
                 {/* Departure station input field */}
                 <TextInput placeholder={'Gare de départ'}
                            style={{
-
+                               marginTop: 8,
+                                fontSize: 18,
                            }}>
 
                 </TextInput>
@@ -60,7 +62,11 @@ export default function SearchBar() {
 
                 </View>
                 {/* Arrival station input field */}
-                <TextInput placeholder={"Gare d'arrivée"}></TextInput>
+                <TextInput placeholder={"Gare d'arrivée"}
+                style={{
+                    fontSize: 18,
+                }}
+                ></TextInput>
             </View>
 
 

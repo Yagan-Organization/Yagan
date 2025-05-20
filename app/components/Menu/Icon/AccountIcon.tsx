@@ -3,10 +3,10 @@ import {Svg, Path } from 'react-native-svg';
 export default function AccountIcon(){
     return(
         <Svg
-            width={100}
-            height={100}
+            width={36}
+            height={36}
             viewBox="0 0 268.2 287.82"
-            fill={'none'}
+            fill={'black'}
         >
             <Path
                 fillRule="evenodd"

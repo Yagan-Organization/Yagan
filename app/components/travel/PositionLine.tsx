@@ -1,6 +1,13 @@
 import React from 'react';
 import { Line, Circle, Svg } from 'react-native-svg';
 
+/**
+ * Renders a static SVG graphic with a vertical line and three circles for use in React Native.
+ *
+ * The SVG includes a vertical black line, two concentric blue circles near the top, and a single black circle near the bottom.
+ *
+ * @returns An SVG element representing the position line graphic.
+ */
 export default function PositionLine() {
     return(
         <Svg width="17" height="100" viewBox="0 0 17 81" fill="none" >

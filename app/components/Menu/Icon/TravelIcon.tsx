@@ -1,5 +1,12 @@
 import {Svg, Path, Rect} from 'react-native-svg';
 
+/**
+ * Renders a static SVG travel icon as a React component.
+ *
+ * The icon consists of a rounded rectangle and a stylized path, suitable for use in menus or navigation elements.
+ *
+ * @returns A React element displaying the travel icon SVG.
+ */
 export default function TravelIcon(){
     return(
         <Svg width="42" height="42" viewBox="0 0 36 36" fill="none">

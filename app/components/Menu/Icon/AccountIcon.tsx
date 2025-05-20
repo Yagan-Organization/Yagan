@@ -1,5 +1,10 @@
 import {Svg, Path } from 'react-native-svg';
 
+/****
+ * Renders a static account/user SVG icon with fixed dimensions.
+ *
+ * @returns A React element displaying an account icon using SVG.
+ */
 export default function AccountIcon(){
     return(
         <Svg

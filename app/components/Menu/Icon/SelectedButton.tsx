@@ -7,6 +7,15 @@ interface SelectedButtonProps {
   gap?: number;
 }
 
+/**
+ * Renders an animated circular indicator that smoothly slides horizontally based on the selected position.
+ *
+ * The indicator's size and spacing can be customized via props. Its horizontal movement is animated using a spring transition whenever the position, button width, or gap changes.
+ *
+ * @param position - The index of the selected button to indicate. Defaults to 0.
+ * @param buttonWidth - The diameter of the circular indicator in pixels. Defaults to 52.
+ * @param gap - The horizontal space between buttons in pixels. Defaults to 0.
+ */
 export default function SelectedButton({ position = 0, buttonWidth = 52, gap = 0 }: SelectedButtonProps) {
   const translateX = useRef(new Animated.Value(position * (buttonWidth + gap))).current;
 

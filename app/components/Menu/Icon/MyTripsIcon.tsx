@@ -1,6 +1,11 @@
 import {Svg, Path } from 'react-native-svg';
 
 
+/**
+ * Renders a static SVG icon representing "My Trips" for use in React Native applications.
+ *
+ * @returns A React element displaying the "My Trips" icon as an SVG graphic.
+ */
 export default function MyTripsIcon(){
     return(
         <Svg

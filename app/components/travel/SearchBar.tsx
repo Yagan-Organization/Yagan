@@ -2,7 +2,11 @@ import {View, TextInput } from 'react-native';
 import { colors } from '../../constants/colors';
 import PositionLine from './PositionLine';
 
-// Main SearchBar component for handling station search inputs
+/**
+ * Renders a styled search bar with input fields for selecting departure and arrival stations.
+ *
+ * The component displays a visual indicator between the two station inputs and applies custom styling for layout and appearance.
+ */
 export default function SearchBar() {
     return (
         // Main container wrapping the entire search interface

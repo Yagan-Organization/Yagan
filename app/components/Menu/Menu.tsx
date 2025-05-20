@@ -6,6 +6,11 @@ import DevNotesIcon from './Icon/DevNotesIcon';
 import AccountIcon from './Icon/AccountIcon';
 import SelectedButton from './Icon/SelectedButton';
 
+/**
+ * Renders a horizontal menu with four selectable icon buttons for navigation.
+ *
+ * Displays Travel, MyTrips, DevNotes, and Account icons as interactive buttons. Highlights the currently selected button and updates the selection when a button is pressed.
+ */
 export default function Menu() {
     // State to track which button is selected (0: Travel, 1: MyTrips, 2: DevNotes, 3: Account)
     const [selectedIndex, setSelectedIndex] = useState(0);

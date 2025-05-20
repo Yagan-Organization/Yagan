@@ -1,5 +1,6 @@
 import { View, TouchableOpacity } from 'react-native';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter, usePathname } from 'expo-router';
 import TravelIcon from './Icon/TravelIcon';
 import MyTripsIcon from './Icon/MyTripsIcon';
 import DevNotesIcon from './Icon/DevNotesIcon';
@@ -7,12 +8,49 @@ import AccountIcon from './Icon/AccountIcon';
 import SelectedButton from './Icon/SelectedButton';
 
 export default function Menu() {
+    const router = useRouter();
+    const pathname = usePathname();
+    
     // State to track which button is selected (0: Travel, 1: MyTrips, 2: DevNotes, 3: Account)
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     // Constants for button sizing and layout
-    const BUTTON_WIDTH = 54;
-    const BUTTON_GAP = 38; // Approximate gap between buttons when using space-between
+    const BUTTON_WIDTH = 50;
+    const BUTTON_GAP = 40; // Approximate gap between buttons when using space-between
+
+    // Update selected index based on current route
+    useEffect(() => {
+        if (pathname === '/' || pathname === '/index') {
+            setSelectedIndex(0);
+        } else if (pathname === '/my-trips') {
+            setSelectedIndex(1);
+        } else if (pathname === '/dev-notes') {
+            setSelectedIndex(2);
+        } else if (pathname === '/account') {
+            setSelectedIndex(3);
+        }
+    }, [pathname]);
+
+    // Navigation functions
+    const navigateToTravel = () => {
+        setSelectedIndex(0);
+        router.replace('/');
+    };
+
+    const navigateToMyTrips = () => {
+        setSelectedIndex(1);
+        router.replace('/my-trips');
+    };
+
+    const navigateToDevNotes = () => {
+        setSelectedIndex(2);
+        router.replace('/dev-notes');
+    };
+
+    const navigateToAccount = () => {
+        setSelectedIndex(3);
+        router.replace('/account');
+    };
 
     return (
         <View
@@ -39,19 +77,19 @@ export default function Menu() {
         >
             <SelectedButton position={selectedIndex} buttonWidth={BUTTON_WIDTH} gap={BUTTON_GAP} />
 
-            <TouchableOpacity onPress={() => setSelectedIndex(0)}>
+            <TouchableOpacity onPress={navigateToTravel}>
                 <TravelIcon />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => setSelectedIndex(1)}>
+            <TouchableOpacity onPress={navigateToMyTrips}>
                 <MyTripsIcon />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => setSelectedIndex(2)}>
+            <TouchableOpacity onPress={navigateToDevNotes}>
                 <DevNotesIcon />
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => setSelectedIndex(3)}>
+            <TouchableOpacity onPress={navigateToAccount}>
                 <AccountIcon />
             </TouchableOpacity>
         </View>

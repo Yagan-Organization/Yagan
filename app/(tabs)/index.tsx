@@ -1,5 +1,7 @@
-import { View } from 'react-native';
+import {Animated, View} from 'react-native';
 import SearchBar from '../components/travel/SearchBar';
+import TrainDiv from '../components/travel/TrainDiv';
+import ScrollView = Animated.ScrollView;
 
 export default function Travel() {
     return (
@@ -14,6 +16,7 @@ export default function Travel() {
         }}
         >
             <SearchBar></SearchBar>
+            <TrainDiv></TrainDiv>
         </View>
     );
 }

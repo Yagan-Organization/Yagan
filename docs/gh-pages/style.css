@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    --yagan-red: #E4232A;
+    --white: #EFEFEF;
+        --border-radius: 20px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    font-family: 'Funnel Sans', sans-serif;
+
+}
+
+body{
+    margin: 2em 2em 0 2em;
+}
+
+h1{
+    text-align: center;
+    Font-size: 3em;
+    font-weight: 500;
+}
+
+h2{
+    Font-size: 2em;
+    font-weight: 500;
+}
+
+h3{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+h4{
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+
+body{
+
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+
+}
+
+#logo{
+    width: 6em;
+    height: auto;
+}
+
+button{
+    color: black;
+
+    border: none;
+    font-size: 1em;
+    text-decoration: none;
+    background: none;
+}
+a{
+    color: black;
+
+    border: none;
+    font-size: 1.2em;
+    text-decoration: none;
+    background: none;
+}
+
+#button-container{
+
+    display: flex;
+    flex-direction: row;
+    gap: 8em;
+    justify-content: space-between;
+
+}
+
+
+#logo-container{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+}
+
+
+footer{
+    background-color: #EFEFEF;
+    border-radius: 2em 2em 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+    padding: 1em;
+    align-items: center;
+}
+
+.hero-section {
+
+    width: 90%;
+    gap: 0;
+    padding: 5em;
+    background-color: #EFEFEF;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 10;
+}
+
+
+.floating {
+    position: absolute;
+    transition: transform 0.3s;
+    background: none;
+}
+
+.floating:hover {
+    transition: transform 0.3s;
+    transform: scale(1.05);
+}
+
+.floating.phone{
+    width: 25em;
+    height: auto;;
+    left: 1%;
+    z-index: 2;
+    top: 40%;
+}
+
+.floating.alert{
+    width: 10em;
+    height: auto;
+    top: 60%;
+    right: 5%;
+}
+
+.floating.pass{
+    width: 25em;
+    height: auto;
+    left: 20%;
+    top: 60%;
+    z-index: 1;
+}
+
+.floating.contro{
+    top: 60%;
+    right: 10%;
+    width: 20em;
+    height: auto;
+}
+
+.floating.signal{
+    top: 80%;
+    right: -1%;
+    width: 25em;
+    height: auto;
+    rotate: 23deg ;
+}
+
+
+.main-buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+
+}
+
+
+#s-content{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+
+}
+
+#introduction{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background: #E4232A;
+    border-radius: var(--border-radius);
+    width: 90%;
+    height: 20em;
+    box-shadow: -48px 86px 28px 0 rgba(0, 0, 0, 0.00), -31px 55px 25px 0 rgba(0, 0, 0, 0.01), -17px 31px 21px 0 rgba(0, 0, 0, 0.05), -8px 14px 16px 0 rgba(0, 0, 0, 0.08), -2px 3px 9px 0 rgba(0, 0, 0, 0.09);
+    text-align: left;
+
+}
+
+#text-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+
+
+
+#open-source{
+    box-shadow: -48px 86px 28px 0 rgba(0, 0, 0, 0.00), -31px 55px 25px 0 rgba(0, 0, 0, 0.01), -17px 31px 21px 0 rgba(0, 0, 0, 0.05), -8px 14px 16px 0 rgba(0, 0, 0, 0.08), -2px 3px 9px 0 rgba(0, 0, 0, 0.09);
+
+    padding-left: 1em;
+    background: #EFEFEF;
+    width: 30%;
+    height: 20em;
+    border-radius: var(--border-radius);
+
+}
+
+#open-source img{
+    width: 20em;
+}
+
+
+#open-source:hover:after {
+    transition: ease-in 0.15s;
+
+}
+
+#open-source svg{
+    width: 8em;
+    height: auto;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+
+
+.btn-black{
+    color: white;
+    background-color: #1E1E1E;
+    border-radius: var(--border-radius);
+    padding: 0.5em 1em;
+}
+
+.btn-red{
+    background-color: #E4232A;
+    color: white;
+    border-radius: var(--border-radius);
+    padding: 0.5em 1em;
+}
+
+#work-together-btn:hover{
+
+}
+
+
+.glow-white-text:hover {
+}
+
+.logo{
+    width: 10em;
+}
+
+#yagan-logo-white{
+    width: 20em;
+    margin-right: 2em;
+}
+
+.h1-margin{
+    margin:0;
+}
+
+
+#join{
+    padding: 30px 40px;
+    background-color: #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);
+}
+
+#join h1{
+    margin-top: 0;
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+
+.people-big{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+
+}
+
+.people-mid{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.people-small{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin-top: -10em;
+}
+
+
+.text-container-people{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.text-container-people h3 h4 {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+}
+
+#matheo{
+    width: 15em;
+
+}
+
+#matheo text{
+    margin: 0;
+}
+
+#sophie{
+    width: 14em;
+
+}
+
+#maybe{
+    width: 10em;
+}
+
+.div-people-big{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-bottom: 10em;
+
+
+}
+
+#people{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.h3-margin{
+    margin: 0;
+}
+
+.h4-margin{
+    margin: 0;
+}
+
+
+
+
+#h1-margin{
+    text-align: left;
+}
+
+#yagan-logo-white{
+    width: 20em;
+}
+
+.footer-nav{
+    color: black    ;
+    display: flex;
+    flex-direction: row;
+    transition: ease-in 0.2s;
+
+}
+
+.footer-nav a:hover{
+    color: #E4232A;
+    transition: ease-in 0.19s;
+}
+
+header a:hover{
+    color: #E4232A;
+    transition: ease-in 0.19s;
+}
+
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: center;
+    width: 6em;
+    height: auto;
+}
+

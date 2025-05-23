@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yagan Documentation</title>
+    <link rel="stylesheet" href="../../gh-pages/style.css">
+    <link rel="stylesheet" href="../../gh-pages/style-docs.css">
+    <link rel="icon" href="../../assets/favicon.png" type="image/x-icon">
+</head>
+<body>
+<script>
+window.onload = function() {
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.innerHTML = `
+        <div class="popup-content">
+            <h3>⚠️Documentation in devloppement </h3>
+            <p> This documentation is still in development. Some sections may be incomplete or <br> So if you have any question contact me
+            hello@matheodelessert.ch
+</p>
+            <button id="closePopup">Compris</button><link rel="stylesheet" href="../../gh-pages/style.css">
+                <link rel="stylesheet" href="../../gh-pages/style-docs.css">
+                <style>
+                    .popup {
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                        background: rgba(0, 0, 0, 0.8);
+                        padding: 20px;
+                        border-radius: 8px;
+                        color: white;
+                        z-index: 1000;
+                        opacity: 0;
+                        transition: opacity 0.3s ease;
+                    }
+                    .popup-content {
+                        text-align: center;
+                    }
+                    .popup h3 {
+                        margin: 0 0 10px 0;
+                        color: white;
+                    }
+                    .popup p {
+                        margin: 0 0 15px 0;
+                    }
+                    .popup button {
+                        background: var(--yagan-red);
+                        color: white;
+                        border: none;
+                        padding: 8px 16px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    }
+                    .popup button:hover {
+                        background: #c41e24;
+                    }
+                </style>
+        </div>
+    `;
+    document.body.appendChild(popup);
+
+    const closeBtn = document.getElementById('closePopup');
+    closeBtn.onclick = function() {
+        popup.style.display = 'none';
+    };
+
+    // Afficher la popup après un court délai
+    setTimeout(() => {
+        popup.style.opacity = '1';
+    }, 500);
+}
+
+</script>
+<header>
+    <div id="logo-container">
+        <img id="logo" src="../../assets/images/logo.png" alt="Logo of Yagan organization">
+        <h2>
+            The Yagan <br>
+            organization
+        </h2>
+    </div>
+    <nav id="button-container">
+        <button><a href="/docs/index.html">about</a></button>
+        <button><a href="/docs/gh-pages/contributing.html">contributing</a></button>
+        <button><a href="/docs/gh-pages/team.html">team</a></button>
+        <button><a href="/docs/gh-pages/alpha/docs.html">docs</a></button>
+    </nav>
+</header>
+
+<div class="docs-container">
+    <aside class="docs-sidebar">
+        <label>
+            <input type="text" class="search-box" placeholder="Search documentation...">
+        </label>
+
+        <div class="version-selector">
+            <span>Version:</span>
+            <label>
+                <select>
+                    <option>alpha</option>
+                </select>
+            </label>
+        </div>
+        <script>
+            document.querySelector('.version-selector select').addEventListener('change', function() {
+                const selectedVersion = this.value.split(' ')[0]; // Extrait "v0.1.0" de "v0.1.0 (Latest)"
+
+                // Option 1: Redirection vers une nouvelle URL
+                window.location.href = `/docs/${selectedVersion}/docs.html`;
+
+            });
+        </script>
+
+        <ul>
+            <li class="section-title">Getting Started</li>
+            <li><a href="#introduction-docs" class="active">Introduction</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#quickstart">Quick Start</a></li>
+
+            <li class="section-title">Core Features</li>
+            <li><a href="#trip-search">Trip Search</a></li>
+            <li><a href="#reporting">Reporting Incidents</a></li>
+            <li><a href="#my-trips">My Trips</a></li>
+
+            <li class="section-title">API Reference</li>
+            <li><a href="#api-overview">API Overview</a></li>
+            <li><a href="#opentransport">OpenTransport Integration</a></li>
+
+            <li class="section-title">Development</li>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#contributing">Contributing</a></li>
+        </ul>
+    </aside>
+
+    <main class="docs-content">
+        <h1>Getting Started</h1>
+
+        <section id="introduction-docs">
+            <h2><strong>Introduction</strong></h2>
+            <p>Yagan is a mobile app designed to help users of the Swiss public rail system make their travel easier and less expensive. With a simple and intuitive interface, Yagan allows users to report incidents on trains, such as out-of-service toilets, crowd density, or the presence of ticket inspectors.</p>
+
+            <p>This documentation will guide you through the installation, usage, and contribution to the Yagan project.</p>
+
+            <h3><strong>Why Yagan ?</strong></h3>
+            <p>Yagan is not only an  project; it also serves as a political statement. Through Yagan, we express our disagreement with the Swiss government's decision to reduce or deny subsidies to the Swiss Federal Railways (CFF).</p>
+
+            <p>In a time when sustainable public transport is more crucial than ever, the government's lack of support sends a troubling message about its priorities. Public transportation is a key element in building a greener and more socially just future.</p>
+        </section>
+        <hr>
+        <section id="installation">
+            <h2>Installation</h2>
+
+            <h3>Prerequisites</h3>
+            <p>Before installing Yagan, ensure you have the following tools installed on your machine:</p>
+            <ul>
+                <li>Node.js (version 14 or higher)</li>
+                <li>npm (version 6 or higher)</li>
+                <li>React Native CLI</li>
+            </ul>
+
+            <h3>Installing the Project</h3>
+            <p>Follow these steps to install Yagan on your local machine:</p>
+
+            <p>1. Clone the repository:</p>
+            <pre><code>git clone https://github.com/your-username/yagan.git</code></pre>
+
+            <p>2. Install the project dependencies:</p>
+            <pre><code>cd yagan
+npm install</code></pre>
+
+            <p>3. Configure your PostgreSQL database by following the instructions in the <code>config/database.js</code> file.</p>
+
+            <p>4. Start the app in development mode:</p>
+            <pre><code>npm start</code></pre>
+        </section>
+
+        <section id="quickstart">
+            <h2>Quick Start</h2>
+            <p>After installing Yagan, here's how to quickly get started with the basic features:</p>
+
+            <h3>Launch the App</h3>
+            <p>Once you've installed all dependencies and started the development server, you can launch the app using:</p>
+            <pre><code>npx react-native run-android
+# or
+npx react-native run-ios</code></pre>
+
+            <h3>Basic Usage</h3>
+            <p>Here's a quick overview of how to use the main features:</p>
+            <ul>
+                <li><strong>Search for a trip:</strong> Enter your departure and arrival stations on the main screen</li>
+                <li><strong>Report an incident:</strong> Select a train and use the "Report" button to create a new incident report</li>
+                <li><strong>Save a trip:</strong> Save your regular trips to receive notifications about incidents</li>
+            </ul>
+        </section>
+        <hr>
+        <section id="trip-search">
+            <h1> Core features</h1>
+            <h2>Trip Search</h2>
+            <p>The Trip Search feature allows users to find train connections between stations in Switzerland.</p>
+
+            <div class="api-box">
+                <h4>Trip Search API</h4>
+                <p>The Trip Search functionality leverages the OpenTransport Data.ch API to provide accurate and real-time information about train connections.</p>
+                <pre><code>// Example of searching for trips
+const trips = await searchTrips({
+  from: 'Lausanne',
+  to: 'Zürich HB',
+  date: '2023-05-04',
+  time: '14:30'
+});</code></pre>
+            </div>
+
+            <h3>Available Parameters</h3>
+            <div class="table-container">
+                <table>
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Type</th>
+                        <th>Required</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>from</td>
+                        <td>String</td>
+                        <td>Yes</td>
+                        <td>Departure station name</td>
+                    </tr>
+                    <tr>
+                        <td>to</td>
+                        <td>String</td>
+                        <td>Yes</td>
+                        <td>Arrival station name</td>
+                    </tr>
+                    <tr>
+                        <td>date</td>
+                        <td>String</td>
+                        <td>No</td>
+                        <td>Travel date (YYYY-MM-DD)</td>
+                    </tr>
+                    <tr>
+                        <td>time</td>
+                        <td>String</td>
+                        <td>No</td>
+                        <td>Travel time (HH:MM)</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="reporting">
+            <h2>Reporting Incidents</h2>
+            <p>The reporting feature is the core functionality of Yagan, allowing users to report incidents on trains in real-time.</p>
+
+            <h3>Types of Reports</h3>
+            <ul>
+                <li><strong>Ticket inspector presence</strong>: Alert other passengers about ticket checks</li>
+                <li><strong>Crowd density</strong>: Report how crowded a train or specific wagon is</li>
+                <li><strong>Out-of-service facilities</strong>: Report non-functioning toilets, doors, or other amenities</li>
+                <li><strong>Delays</strong>: Real-time reporting of delays not yet in the official system</li>
+            </ul>
+            <section id="my-trips">
+                <h3>My Trips</h3>
+                <p>Ticket inspectors are responsible for checking tickets on trains. When a ticket inspector is present on a train, they can alert other passengers about the presence of ticket inspectors.</p>
+            </section>
+
+            <div class="api-box">
+                <h4>Creating a Report</h4>
+                <pre><code>// Example of creating a new incident report
+const report = await createReport({
+  trainId: 'IC_1234',
+  type: 'TICKET_CHECK',
+  wagonNumber: 12,
+  timestamp: new Date(),
+  details: 'Checking tickets in 2nd class'
+});</code></pre>
+            </div>
+        </section>
+
+        <!-- Additional sections would continue here -->
+        <section id="api-overview">
+            <h1>API Reference</H1>
+            <h2>API Overview</h2>
+            <p>Yagan uses a combination of internal APIs and external services to provide its functionality. This section provides an overview of the available APIs.</p>
+
+            <h3>Authentication</h3>
+            <p>Most API endpoints require authentication. Yagan uses JSON Web Tokens (JWT) for authentication.</p>
+
+            <div class="api-box">
+                <h4>Authentication Example</h4>
+                <pre><code>// Example of authenticating with the API
+const token = await authenticate({
+  username: 'user@example.com',
+  password: 'yourpassword'
+});
+
+// Use the token in subsequent requests
+const headers = {
+  'Authorization': `Bearer ${token}`
+};</code></pre>
+            </div>
+        </section>
+
+        <section id="opentransport">
+            <h2>OpenTransport Integration</h2>
+            <p>Yagan relies on the OpenTransport Data.ch API to provide real-time information about Swiss trains, including schedules, connections, and platform changes.</p>
+
+            <h3>Available Data</h3>
+            <p>Through the OpenTransport integration, Yagan can access:</p>
+            <ul>
+                <li>Real-time train schedules</li>
+                <li>Station information</li>
+                <li>Platform data</li>
+                <li>Connection details</li>
+                <li>Delay information</li>
+            </ul>
+
+            <div class="api-box">
+                <h4>Accessing Train Data</h4>
+                <pre><code>// Example of fetching real-time train data
+const trainInfo = await getTrainInfo('IC_1234');
+
+// Example of getting station information
+const stationInfo = await getStationInfo('Lausanne');</code></pre>
+            </div>
+        </section>
+
+        <section id="architecture">
+            <h2>Architecture</h2>
+            <p>
+                The Yagan project is structured as a modular React Native application, organized for clarity and scalability.
+                The frontend is built with JavaScript and React Native, while the backend is powered by a MySQL database accessed via a REST API.
+            </p>
+            <p>
+                The application is divided into several core areas:
+            <ul>
+                <li><strong>UI Components:</strong> All user interface elements, reusable across views.</li>
+                <li><strong>Pages:</strong> Screens such as Home, Search, Account, and Report.</li>
+                <li><strong>State Management:</strong> Local state using useState and global logic via Context (or Redux if applicable).</li>
+                <li><strong>Data Layer:</strong> API handlers for OpenTransportData.ch and database communication.</li>
+            </ul>
+
+            <p>
+                The database is hosted on Hostinger using MySQL and contains tables for users, saved trips, and reports.
+                All user inputs and real-time control reports are synced with the backend using secure endpoints.
+            </p>
+        </section>
+        <section id="contributing">
+            <h2>Contributing</h2>
+            <p>
+                We welcome contributions from everyone! Whether you're fixing a typo, adding new features, or improving the design,
+                your help is appreciated.
+            </p>
+            <h3>Getting Started</h3>
+            <ul>
+                <li>Fork the repository and clone your fork locally.</li>
+                <li>Install dependencies using <code>npm install</code>.</li>
+                <li>Create a new branch for your changes: <code>git checkout -b your-feature-name</code>.</li>
+                <li>Make your changes and commit them with clear messages.</li>
+                <li>Push your branch to GitHub and open a Pull Request.</li>
+            </ul>
+
+            <h3>Code Style</h3>
+            <p>
+                Please follow the existing code style. If you're unsure, try to match the surrounding code.
+            </p>
+
+            <h3>Reporting Bugs</h3>
+            <p>
+                If you find a bug, please open an issue describing it clearly. Include steps to reproduce the problem if possible.
+            </p>
+
+            <h3>Suggestions & Feedback</h3>
+            <p>
+                We’re happy to hear your ideas! Open an issue or start a discussion if you have suggestions for improvements or new features.
+            </p>
+
+            <p>Thank you for helping us improve the project!</p>
+        </section>
+    </main>
+
+</div>
+
+<footer>
+    <div class="logo-container">
+        <img class="logo" id="logo-footer" src="../../assets/images/logo.png" alt="Logo of Yagan organization">
+        <h2>
+            The Yagan <br>
+            organization
+        </h2>
+    </div>
+    <p>&copy; 2023 Yagan organization</p>
+
+    <nav class="footer-nav">
+        <button><a href="../../index.html">about</a></button>
+        <button><a href="../contributing.html">contributing</a></button>
+        <button><a href="../team.html">team</a></button>
+        <button><a href="/docs/gh-pages/alpha/docs.html">docs</a></button>
+    </nav>
+</footer>
+
+<script>
+    // Simple active link toggle
+    document.addEventListener('DOMContentLoaded', function() {
+        const links = document.querySelectorAll('.docs-sidebar a');
+
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                links.forEach(l => l.classList.remove('active'));
+
+
+                this.classList.add('active');
+            });
+        });
+
+        // Search functionality (simplified)
+        const searchBox = document.querySelector('.search-box');
+        searchBox.addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+
+            links.forEach(link => {
+                const content = link.textContent.toLowerCase();
+                if (content.includes(searchTerm)) {
+                    link.style.display = 'block';
+                } else {
+                    link.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
+

@@ -4,14 +4,13 @@
 
 ## What is Yagan?
 
-Yagan is a mobile app (currently in development) designed to help users of the Swiss public rail system make their travel easier and less expensive. With a simple and intuitive interface, Yagan allows users to report incidents on trains, such as out-of-service toilets, crowd density, or the presence of ticket inspector..
+Yagan is a mobile app (currently in development) designed to help users of the Swiss public rail system make their travel easier and less expensive. With a simple and intuitive interface, Yagan allows users to report incidents on trains, such as out-of-service toilets, crowd density, or the presence of ticket inspector.
 
 ## Why Yagan?
 
-Yagan is not only an artistic project; it also serves as a political statement. Through Yagan, we express our disagreement with the Swiss government’s decision to reduce or deny subsidies to the Swiss Federal Railways (CFF).
+Yagan is not only an open source project; it also serves as a political statement. Through Yagan, we express our disagreement with the Swiss government of not giving enought subsidies to the Swiss Federal Railways (CFF).
 
-In a time when sustainable public transport is more crucial than ever, the government’s lack of support sends a troubling message about its priorities. Public transportation is a key element in building a greener and more socially just future. By failing to invest adequately in CFF, the government risks undermining accessibility, environmental efforts, and social cohesion.
-
+In a time when sustainable public transport is more crucial than ever, the government’s lack of support sends a troubling message about its priorities. The CFF, acting like a private company in its pursuit of profit, highlights this issue. Public transportation is a key element in building a greener and more socially just future. By failing to invest adequately in the CFF, the government risks undermining accessibility, environmental efforts, and social cohesion.
 
 
 ## Key Features

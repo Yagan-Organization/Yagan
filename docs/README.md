@@ -1,6 +1,6 @@
 ![Yagan Banner.png](images/Yagan%20Banner.png)
 
-[![App Build](https://github.com/homogenic1000/Yagan/actions/workflows/launch_app_test.yml/badge.svg)](https://github.com/homogenic1000/Yagan/actions/workflows/launch_app_test.yml)
+![Commit count](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/homogenic1000/Yagan/master/badge.json)
 
 ## What is Yagan?
 

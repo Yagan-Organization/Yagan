@@ -1,6 +1,6 @@
 ![Yagan Banner.png](images/Yagan%20Banner.png)
 
-![Commit count](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/homogenic1000/Yagan/master/badge.json)
+![GitHub last commit](https://img.shields.io/github/last-commit/Yagan-Organization/Yagan?display_timestamp=author&style=plastic)
 
 ## What is Yagan?
 

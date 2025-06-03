@@ -19,14 +19,15 @@ export default function SearchBar() {
                 paddingHorizontal: 16,
                 paddingVertical: 12,
                 margin: 0,
-                shadowColor: "rgba(217, 217, 217, 50)",
+                shadowColor: "rgba(217, 217, 217, 0.5)",
+
                 shadowOffset: {
                     width: 10,
                     height: 10
                 },
                 shadowRadius: 10,
                 elevation: 10,
-                shadowOpacity: 100,
+                shadowOpacity: 1,
 
             }}
         >

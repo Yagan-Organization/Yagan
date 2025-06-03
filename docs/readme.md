@@ -131,10 +131,9 @@ Ensure you have these tools installed:
    npm install
    ```
 
-3. **Database setup** *(coming soon)*
+3. **Database & backend setup**
    ```bash
-   # Future: Configure PostgreSQL
-   # Instructions will be in config/database.js
+      # comming soon
    ```
 
 4. **Start development server**

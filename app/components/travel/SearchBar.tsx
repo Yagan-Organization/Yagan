@@ -12,23 +12,23 @@ export default function SearchBar() {
         // Main container wrapping the entire search interface
         <View
             style={{
-                borderColor: 'black',
-                borderWidth: 0.8,
                 display: 'flex',
-                borderRadius: 20,
+                borderRadius: 22,
                 flexDirection: 'row',
                 backgroundColor: colors.white,
                 paddingHorizontal: 16,
                 paddingVertical: 12,
                 margin: 0,
-                shadowColor: '#000',
+                shadowColor: "rgba(217, 217, 217, 0.5)",
+
                 shadowOffset: {
-                    width: 0,
-                    height: 2,
+                    width: 10,
+                    height: 10
                 },
-                shadowOpacity: 0.25,
-                shadowRadius: 3.84,
-                elevation: 5,
+                shadowRadius: 10,
+                elevation: 10,
+                shadowOpacity: 1,
+
             }}
         >
             {/* Left container for the position indicator */}
@@ -55,7 +55,7 @@ export default function SearchBar() {
                 <View
                     style={{
 
-                        width: 300,
+                        width: 350,
                         marginVertical: 22,
                         backgroundColor: 'black',
                         height: 1,

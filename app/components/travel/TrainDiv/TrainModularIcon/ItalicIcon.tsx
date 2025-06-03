@@ -9,6 +9,13 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
+/**
+ * Renders a static icon representing an InterCity train type and number.
+ *
+ * Displays the train type "IC" in a red, italicized container and the train number "54" in a bordered container, styled according to Yagan UI Guidelines.
+ *
+ * @remark The train type and number are hardcoded and cannot be customized via props.
+ */
 export default function ItalicIcon(props: any) {
     return (
         <View style={styles.Container}>

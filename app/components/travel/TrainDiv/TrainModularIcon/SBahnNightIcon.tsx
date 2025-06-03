@@ -9,6 +9,12 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
+/**
+ * Renders a static icon for S-Bahn Night trains, displaying the train type "SN" and number "54" with distinct styling.
+ *
+ * @remark
+ * The train type and number are hardcoded and cannot be customized via props.
+ */
 export default function ItalicIcon(props: any) {
     return (
         <View style={styles.Container}>

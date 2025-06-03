@@ -8,6 +8,13 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
+/**
+ * Displays a static icon representing a Regional Express train with type "RE" and number "33".
+ *
+ * Visually references the original CFF symbol and follows Yagan UI Guidelines.
+ *
+ * @remark The train type and number are hardcoded and cannot be customized via props.
+ */
 export default function RegularIcon(props: any) {
     return (
         <View style={styles.Container}>

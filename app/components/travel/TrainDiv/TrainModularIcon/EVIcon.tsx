@@ -9,6 +9,11 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
+/**
+ * Displays a stylized icon for EV (alternate trip) trains, showing the train type "SN" and number "54".
+ *
+ * The icon visually references the original CFF symbol and follows Yagan UI Guidelines. Both the train type and number are hardcoded and not configurable.
+ */
 export default function ItalicIcon(props: any) {
     return (
         <View style={styles.Container}>

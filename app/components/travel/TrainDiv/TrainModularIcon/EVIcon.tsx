@@ -1,0 +1,63 @@
+/*
+This components is used to display the train type and number ONLY for EV (Alternate trip in case one train is cancel) trains .
+to ensure, the icon remains recognizable as a reference to the original CFF symbol and to respect the new Yagan UI Guidelines.
+Check the Yagan UI Guidelines for more information: https://www.figma.com/community/file/1509107464533831067/yagan-ui-guidelines
+* */
+
+
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { colors } from '@/app/constants/colors';
+
+export default function ItalicIcon(props: any) {
+    return (
+        <View style={styles.Container}>
+            <View style={styles.TypeContainer}>
+                <Text style={styles.TrainTypeText}>
+                    SN
+                </Text>
+            </View>
+            <View style={styles.NumberContainer}>
+                <Text style={styles.TrainNumberText}>
+                    54
+                </Text>
+            </View>
+        </View>
+    )
+}
+
+const styles = StyleSheet.create({
+    Container: {
+        flexDirection: 'row',
+        gap: 1,
+    },
+    TypeContainer: {
+        alignItems: 'center',
+        paddingHorizontal: 4,
+        borderRadius: 3,
+        backgroundColor: '#E84E10',
+    },
+
+    TrainTypeText: {
+        fontSize: 14,
+        fontWeight: 700,
+        fontStyle: 'normal',
+        color: colors.SoftAntharcite,
+    },
+    NumberContainer: {
+        alignItems: 'center',
+        paddingHorizontal: 4,
+        borderWidth: 1,
+        borderRadius: 3,
+        borderColor: colors.SoftAntharcite,
+
+
+    },
+
+    TrainNumberText: {
+        fontSize: 14,
+        fontWeight: 700,
+        color: colors.SoftAntharcite,
+    },
+
+})

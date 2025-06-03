@@ -9,7 +9,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
-export default function ItalicIcon(TrainNumber: string) {
+export default function SBahnNightIcon(TrainNumber: string) {
     return (
         <View style={styles.Container}>
             <View style={styles.TypeContainer}>

@@ -1,5 +1,7 @@
 import { View } from 'react-native';
 import SearchBar from '../components/travel/SearchBar';
+import RegularIcon from '../components/travel/TrainDiv/TrainModularIcon/RegularIcon';
+import ItalicIcon from "@/app/components/travel/TrainDiv/TrainModularIcon/ItalicIcon";
 
 export default function Travel() {
     return (
@@ -14,6 +16,8 @@ export default function Travel() {
         }}
         >
             <SearchBar></SearchBar>
+            <RegularIcon></RegularIcon>
+            <ItalicIcon></ItalicIcon>
         </View>
     );
 }

@@ -1,7 +1,8 @@
  export const colors = {
       red : '#E42320',
       SoftAntharcite : '#262B2D',
-      white : '#FFFFFF'
+      white : '#FFFFFF',
+     orange : '#E84E10',
 };
 
 export const borderRadius = {

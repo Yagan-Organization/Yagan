@@ -9,7 +9,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
-export default function ItalicIcon(props: any) {
+export default function ItalicIcon(TrainNumber: string) {
     return (
         <View style={styles.Container}>
             <View style={styles.TypeContainer}>
@@ -19,7 +19,7 @@ export default function ItalicIcon(props: any) {
             </View>
             <View style={styles.NumberContainer}>
                 <Text style={styles.TrainNumberText}>
-                    54
+                    {TrainNumber}
                 </Text>
             </View>
         </View>

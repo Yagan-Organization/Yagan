@@ -8,17 +8,17 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
-export default function RegularIcon(props: any) {
+export default function RegularIcon(TrainNumber: string, TrainType: string) {
     return (
         <View style={styles.Container}>
             <View style={styles.TypeContainer}>
                 <Text style={styles.TrainTypeText}>
-                    RE
+                    {TrainType}
                 </Text>
             </View>
             <View style={styles.NumberContainer}>
                 <Text style={styles.TrainNumberText}>
-                    33
+                    {TrainNumber}
                 </Text>
             </View>
         </View>

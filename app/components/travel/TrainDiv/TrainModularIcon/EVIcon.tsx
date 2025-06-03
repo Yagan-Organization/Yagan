@@ -9,7 +9,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
-export default function ItalicIcon(props: any) {
+export default function EVIcon() {
     return (
         <View style={styles.Container}>
             <View style={styles.TypeContainer}>
@@ -34,8 +34,7 @@ const styles = StyleSheet.create({
     TypeContainer: {
         alignItems: 'center',
         paddingHorizontal: 4,
-        borderRadius: 3,
-        backgroundColor: '#E84E10',
+        backgroundColor: ',colors.orange',
     },
 
     TrainTypeText: {

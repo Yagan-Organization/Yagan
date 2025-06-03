@@ -3,9 +3,9 @@ import { colors } from '../../constants/colors';
 import PositionLine from './PositionLine';
 
 /**
- * Renders a styled search bar with input fields for selecting departure and arrival stations.
+ * Displays a search bar with input fields for selecting departure and arrival stations.
  *
- * The component displays a visual indicator between the two station inputs and applies custom styling for layout and appearance.
+ * The component features a visual indicator between the two station inputs and applies custom styling for a modern, elevated appearance.
  */
 export default function SearchBar() {
     return (

@@ -1,6 +1,7 @@
 ![Yagan Banner.png](images/Yagan%20Banner.png)
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Yagan-Organization/Yagan?display_timestamp=author&style=plastic)
+[![License](https://img.shields.io/github/license/Yagan-Organization/Yagan)](LICENSE)
 
 ## What is Yagan?
 

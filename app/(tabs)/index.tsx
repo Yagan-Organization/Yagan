@@ -1,6 +1,6 @@
 import { View } from 'react-native';
 import SearchBar from '../components/travel/SearchBar';
-
+import TrainDiv from '../components/travel/TrainDiv/TrainDiv';
 export default function Travel() {
     return (
         <View
@@ -14,6 +14,10 @@ export default function Travel() {
         }}
         >
             <SearchBar></SearchBar>
+            <TrainDiv
+            TrainEndPoint='Saint Maurice'
+            TrackNumber='7'
+            ></TrainDiv>
         </View>
     );
 }

@@ -12,15 +12,34 @@ interface TrainDivProps {
   TrackNumber: string;
   DepartStation: string;
   ArrivalStation: string;
+  TrainType: string;
+  TrainNumber: string;
 }
 
-export default function TrainDiv({ TrainEndPoint, TrackNumber, DepartStation, ArrivalStation }: TrainDivProps) {
+export default function TrainDiv({ TrainEndPoint, TrackNumber, DepartStation, ArrivalStation, TrainType, TrainNumber }: TrainDivProps) {
+    // Function to render the appropriate icon based on train type
+    const renderTrainIcon = () => {
+        const trainTypePrefix = TrainType.replace(/\d+$/, ''); // Remove numbers from the end
+        
+        switch (trainTypePrefix) {
+            case 'EV':
+                return <EVIcon TrainNumber={TrainNumber} />;
+            case 'IC':
+            case 'IR':
+                return <ItalicIcon TrainNumber={TrainNumber} TrainType={trainTypePrefix} />;
+            case 'SN':
+                return <SBahnNightIcon TrainNumber={TrainNumber} />;
+            case 'RE':
+            case 'R':
+            default:
+                return <RegularIcon TrainNumber={TrainNumber} TrainType={trainTypePrefix} />;
+        }
+    };
+
     return (
         <View style={styles.Container}>
             <View style={styles.MajorInfo}>
-                <RegularIcon
-                    TrainNumber="33"
-                    TrainType="RE" />
+                {renderTrainIcon()}
                 <Text style={styles.directionText}>Direction {TrainEndPoint}</Text>
                 <Text style={styles.trackText}>Voie {TrackNumber}</Text>
             </View>

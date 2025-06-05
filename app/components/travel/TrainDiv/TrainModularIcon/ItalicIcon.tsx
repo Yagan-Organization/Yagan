@@ -9,7 +9,13 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
-export default function ItalicIcon(TrainNumber: string, TrainType: string) {
+// Define the props interface
+interface ItalicIconProps {
+    TrainNumber: string;
+    TrainType: string;
+}
+
+export default function ItalicIcon({ TrainNumber, TrainType }: ItalicIconProps) {
     return (
         <View style={styles.Container}>
             <View style={styles.TypeContainer}>

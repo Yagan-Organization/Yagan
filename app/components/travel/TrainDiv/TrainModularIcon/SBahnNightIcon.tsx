@@ -9,7 +9,12 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
-export default function SBahnNightIcon(TrainNumber: string) {
+// Define the props interface
+interface SBahnNightIconProps {
+    TrainNumber: string;
+}
+
+export default function SBahnNightIcon({ TrainNumber }: SBahnNightIconProps) {
     return (
         <View style={styles.Container}>
             <View style={styles.TypeContainer}>

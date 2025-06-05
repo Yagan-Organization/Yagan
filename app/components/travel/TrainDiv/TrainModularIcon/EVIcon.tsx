@@ -9,17 +9,22 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
-export default function EVIcon() {
+// Define the props interface
+interface EVIconProps {
+    TrainNumber: string;
+}
+
+export default function EVIcon({ TrainNumber }: EVIconProps) {
     return (
         <View style={styles.Container}>
             <View style={styles.TypeContainer}>
                 <Text style={styles.TrainTypeText}>
-                    SN
+                    EV
                 </Text>
             </View>
             <View style={styles.NumberContainer}>
                 <Text style={styles.TrainNumberText}>
-                    54
+                    {TrainNumber}
                 </Text>
             </View>
         </View>

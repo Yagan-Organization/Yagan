@@ -16,6 +16,20 @@ interface TrainDivProps {
   TrainNumber: string;
 }
 
+/**
+ * Displays train travel information with dynamic iconography and styled layout.
+ *
+ * Renders a card showing the train's direction, track number, departure and arrival stations, and an icon corresponding to the train type.
+ *
+ * @param TrainEndPoint - The destination of the train.
+ * @param TrackNumber - The track number for the train.
+ * @param DepartStation - The name of the departure station.
+ * @param ArrivalStation - The name of the arrival station.
+ * @param TrainType - The type of train, used to determine the icon.
+ * @param TrainNumber - The train's identifying number.
+ *
+ * @returns A styled React Native component displaying train details and the appropriate train icon.
+ */
 export default function TrainDiv({ TrainEndPoint, TrackNumber, DepartStation, ArrivalStation, TrainType, TrainNumber }: TrainDivProps) {
     // Function to render the appropriate icon based on train type
     const renderTrainIcon = () => {

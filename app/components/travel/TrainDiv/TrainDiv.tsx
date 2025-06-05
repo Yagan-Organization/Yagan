@@ -33,7 +33,7 @@ interface TrainDivProps {
 export default function TrainDiv({ TrainEndPoint, TrackNumber, DepartStation, ArrivalStation, TrainType, TrainNumber }: TrainDivProps) {
     // Function to render the appropriate icon based on train type
     const renderTrainIcon = () => {
-        const trainTypePrefix = TrainType.replace(/\d+$/, ''); // Remove numbers from the end
+        const trainTypePrefix = TrainType?.replace(/\d+$/, '') || ''; // Remove numbers from the end
 
         switch (trainTypePrefix) {
             case 'EV':

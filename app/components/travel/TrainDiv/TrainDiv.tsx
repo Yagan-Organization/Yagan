@@ -20,10 +20,11 @@ export default function TrainDiv({ TrainEndPoint, TrackNumber, DepartStation, Ar
     // Function to render the appropriate icon based on train type
     const renderTrainIcon = () => {
         const trainTypePrefix = TrainType.replace(/\d+$/, ''); // Remove numbers from the end
-        
+
         switch (trainTypePrefix) {
             case 'EV':
                 return <EVIcon TrainNumber={TrainNumber} />;
+            case 'EC':
             case 'IC':
             case 'IR':
                 return <ItalicIcon TrainNumber={TrainNumber} TrainType={trainTypePrefix} />;

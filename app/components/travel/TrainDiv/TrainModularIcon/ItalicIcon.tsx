@@ -15,6 +15,14 @@ interface ItalicIconProps {
     TrainType: string;
 }
 
+/**
+ * Displays a stylized train type and number icon following CFF and Yagan UI guidelines.
+ *
+ * Renders the train type in italic white text on a red background and the train number in bold anthracite text with a bordered container.
+ *
+ * @param TrainNumber - The train number to display.
+ * @param TrainType - The train type to display (e.g., IC, IR, EC).
+ */
 export default function ItalicIcon({ TrainNumber, TrainType }: ItalicIconProps) {
     return (
         <View style={styles.Container}>

@@ -16,6 +16,18 @@ interface TrainDivProps {
   TrainNumber: string;
 }
 
+/**
+ * Displays train travel information including train type, direction, track number, and departure and arrival stations.
+ *
+ * Renders a styled card with a train icon based on the train type, the train's endpoint, track number, and the names of the departure and arrival stations separated by an arrow icon.
+ *
+ * @param TrainEndPoint - The destination of the train.
+ * @param TrackNumber - The track number for the train.
+ * @param DepartStation - The name of the departure station.
+ * @param ArrivalStation - The name of the arrival station.
+ * @param TrainType - The type of train, used to determine the icon.
+ * @param TrainNumber - The train's identifying number.
+ */
 export default function TrainDiv({ TrainEndPoint, TrackNumber, DepartStation, ArrivalStation, TrainType, TrainNumber }: TrainDivProps) {
     // Function to render the appropriate icon based on train type
     const renderTrainIcon = () => {

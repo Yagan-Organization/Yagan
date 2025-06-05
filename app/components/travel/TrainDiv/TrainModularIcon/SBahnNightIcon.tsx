@@ -14,6 +14,13 @@ interface SBahnNightIconProps {
     TrainNumber: string;
 }
 
+/**
+ * Displays an icon for an S-Bahn Night train, showing the fixed train type "SN" and the provided train number.
+ *
+ * @param TrainNumber - The train number to display next to the "SN" type indicator.
+ *
+ * @returns A styled React Native component representing the S-Bahn Night train type and number.
+ */
 export default function SBahnNightIcon({ TrainNumber }: SBahnNightIconProps) {
     return (
         <View style={styles.Container}>

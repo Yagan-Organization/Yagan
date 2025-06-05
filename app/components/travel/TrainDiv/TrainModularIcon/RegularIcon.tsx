@@ -14,6 +14,12 @@ interface RegularIconProps {
     TrainType: string;
 }
 
+/**
+ * Displays a stylized icon for S-Bahn, Regional, or Regional Express trains, showing the train type and number according to CFF symbol style and Yagan UI Guidelines.
+ *
+ * @param TrainNumber - The train's identifying number to display.
+ * @param TrainType - The train type abbreviation (e.g., "S", "RE", "R") to display.
+ */
 export default function RegularIcon({ TrainNumber, TrainType }: RegularIconProps) {
     return (
         <View style={styles.Container}>

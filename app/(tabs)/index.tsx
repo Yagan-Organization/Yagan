@@ -1,6 +1,11 @@
 import { View } from 'react-native';
 import SearchBar from '../components/travel/SearchBar';
 import TrainDiv from '../components/travel/TrainDiv/TrainDiv';
+/**
+ * Displays the travel screen with a search bar and train information.
+ *
+ * Renders a layout containing a search bar and a train details section, styled with spacing to accommodate a bottom menu.
+ */
 export default function Travel() {
     return (
         <View

@@ -14,6 +14,11 @@ interface EVIconProps {
     TrainNumber: string;
 }
 
+/**
+ * Displays the "EV" train type label alongside a provided train number in a styled horizontal layout.
+ *
+ * @param TrainNumber - The train number to display next to the "EV" label.
+ */
 export default function EVIcon({ TrainNumber }: EVIconProps) {
     return (
         <View style={styles.Container}>

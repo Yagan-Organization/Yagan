@@ -17,6 +17,8 @@ export default function Travel() {
             <TrainDiv
             TrainEndPoint='Saint Maurice'
             TrackNumber='7'
+            DepartStation='Lausanne'
+            ArrivalStation='Saint Maurice'
             ></TrainDiv>
         </View>
     );

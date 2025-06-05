@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     TypeContainer: {
         alignItems: 'center',
         paddingHorizontal: 4,
-        backgroundColor: ',colors.orange',
+        backgroundColor: colors.orange,
     },
 
     TrainTypeText: {

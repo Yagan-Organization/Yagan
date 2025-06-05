@@ -9,17 +9,27 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
-export default function EVIcon() {
+// Define the props interface
+interface EVIconProps {
+    TrainNumber: string;
+}
+
+/**
+ * Displays the "EV" train type label alongside a provided train number, styled according to Yagan UI Guidelines.
+ *
+ * @param TrainNumber - The train number to display next to the "EV" label.
+ */
+export default function EVIcon({ TrainNumber }: EVIconProps) {
     return (
         <View style={styles.Container}>
             <View style={styles.TypeContainer}>
                 <Text style={styles.TrainTypeText}>
-                    SN
+                    EV
                 </Text>
             </View>
             <View style={styles.NumberContainer}>
                 <Text style={styles.TrainNumberText}>
-                    54
+                    {TrainNumber}
                 </Text>
             </View>
         </View>
@@ -34,7 +44,7 @@ const styles = StyleSheet.create({
     TypeContainer: {
         alignItems: 'center',
         paddingHorizontal: 4,
-        backgroundColor: ',colors.orange',
+        backgroundColor: colors.orange,
     },
 
     TrainTypeText: {

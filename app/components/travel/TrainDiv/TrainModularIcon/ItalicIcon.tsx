@@ -9,7 +9,21 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
-export default function ItalicIcon(TrainNumber: string, TrainType: string) {
+// Define the props interface
+interface ItalicIconProps {
+    TrainNumber: string;
+    TrainType: string;
+}
+
+/**
+ * Displays a styled icon showing the train type and train number for InterCity, InterRegio, and EC trains.
+ *
+ * @param TrainNumber - The train's identifying number.
+ * @param TrainType - The type of train (e.g., InterCity, InterRegio, EC).
+ *
+ * @returns A React element rendering the train type in an italic red box and the train number in a bordered container.
+ */
+export default function ItalicIcon({ TrainNumber, TrainType }: ItalicIconProps) {
     return (
         <View style={styles.Container}>
             <View style={styles.TypeContainer}>

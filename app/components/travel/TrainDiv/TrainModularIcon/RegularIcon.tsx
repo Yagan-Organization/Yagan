@@ -8,7 +8,21 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { colors } from '@/app/constants/colors';
 
-export default function RegularIcon(TrainNumber: string, TrainType: string) {
+// Define the props interface
+interface RegularIconProps {
+    TrainNumber: string;
+    TrainType: string;
+}
+
+/**
+ * Displays a styled icon for S-Bahn, Regional, or Regional Express trains, showing the train type and number.
+ *
+ * @param TrainNumber - The train's identifying number to display.
+ * @param TrainType - The train type label (e.g., "S", "RE", "RB") to display.
+ *
+ * @returns A React element rendering the train type and number with distinct styles according to Yagan UI Guidelines.
+ */
+export default function RegularIcon({ TrainNumber, TrainType }: RegularIconProps) {
     return (
         <View style={styles.Container}>
             <View style={styles.TypeContainer}>

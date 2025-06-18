@@ -1,10 +1,9 @@
 import { View, Text, StyleSheet } from 'react-native';
-
+import AccountButton from "@/app/components/account/AccountButton";
 export default function Account() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Account</Text>
-      <Text style={styles.subtitle}>Your account information will appear here</Text>
+<AccountButton></AccountButton>
     </View>
   );
 }
@@ -14,7 +13,8 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingBottom: 80, // Add padding for the menu at bottom
+    paddingBottom: 20,
+    paddingHorizontal: 20,
   },
   title: {
     fontSize: 24,

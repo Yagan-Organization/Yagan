@@ -1,15 +1,23 @@
 import React from "react";
-import { View, Text, StyleSheet} from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity} from "react-native";
 import {colors} from "@/app/constants/colors";
 
-export default function AccountButton(Color: string, ColorText: string) {
+interface AccountButtonProps {
+    IconPNG: any; // React Native image source type
+    ButtonText: string;
+    IconSize?: number; // Optional icon size, defaults to 20
+}
+
+export default function AccountButton({ IconPNG, ButtonText, IconSize = 20 }: AccountButtonProps) {
 
     return(
         <View style={styles.Button}>
-
+            <TouchableOpacity style={styles.Touch}>
+                <Image source={IconPNG} style={[styles.Icon, { width: IconSize, height: IconSize }]} />
             <Text style={styles.Text}>
-                Notifications
+                {ButtonText}
             </Text>
+            </TouchableOpacity>
         </View>
     )
 
@@ -17,6 +25,8 @@ export default function AccountButton(Color: string, ColorText: string) {
 
 const styles = StyleSheet.create({
     Button:{
+        display: "flex",
+        flexDirection: "row",
         height: 50,
         width: '100%',
         backgroundColor: colors.white,
@@ -28,9 +38,29 @@ const styles = StyleSheet.create({
             width: -5,
             height: 5
         },
+
+
+    },
+
+    Touch:{
+        gap: 5,
+
+        alignItems: 'center',
+        justifyContent: 'center',
+        display: "flex",
+        flexDirection: "row",
+        width: '100%',
+        height: '100%',
+
     },
     Text: {
-        color: "",
-        fontSize: 16,
+        fontSize: 20,
+        fontWeight: "400",
     },
+
+    Icon: {
+        width: 40,
+        height: 40,
+        resizeMode: 'contain',
+    }
 });

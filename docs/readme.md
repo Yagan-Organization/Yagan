@@ -185,7 +185,7 @@ We welcome contributors who share our vision for better public transportation!
 ## 📊 Project Status
 
 ```
-🚧 Status: Active Development
+🚧 Status: Summer break baby 😎🤟 (comming back at the end of August)
 📱 Platform: iOS & Android (React Native)
 👥 Contributors: Welcome!
 📈 Version: proto-version 1.0

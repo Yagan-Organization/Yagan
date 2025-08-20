@@ -44,7 +44,6 @@ const styles = StyleSheet.create({
 
     Touch:{
         gap: 5,
-
         alignItems: 'center',
         justifyContent: 'center',
         display: "flex",
